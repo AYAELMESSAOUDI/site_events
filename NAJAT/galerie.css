@@ -1,0 +1,108 @@
+
+.container {
+    width: 800px;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 100%; /* اجعل العرض كاملاً ليناسب الهاتف */
+        padding: 10px;
+    }
+}
+body {
+    background-color: #6f4e37; 
+    font-family: 'Playfair Display', serif; 
+    color: #f4ede4; 
+}
+.hero-section{
+    position:relative;
+    width:100%;
+    height: 500px;
+    overflow:hidden; /*pour éviter que l'image ne sorte du cadre*/
+}
+.hero-section img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;/*l'image couvre l'espace sans se déformer de manière excessive*/
+}
+.centred-title{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    margin: 0;
+    text-transform: uppercase;
+}
+.button-group{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    justify-content: flex-start;
+    margin-top: 40px;
+
+}
+.hide{
+    display: none;
+}
+.my-button{
+    background-color: #b39177;
+    color: white;
+    border: none;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 10px 80px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* تنسيق حاوية المعرض */
+.gallery {
+    display: grid;
+    /* إنشاء 3 أعمدة متساوية، وفي الشاشات الصغيرة تصبح عمود واحد تلقائياً */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 25px; /* مسافة أنيقة بين الصور */
+    padding: 40px 10%;
+    background-color: #6f4e37; /* لون خلفية هادئ يشبه المتاحف */
+}
+
+/* تنسيق صندوق الصورة الواحدة */
+.pic {
+    background: #6f4e37;
+    border-radius: 20px; /* زوايا دائرية ناعمة مثل الصورة التي أرفقتها */
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* ظل خفيف جداً يعطي فخامة */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+/* تأثير عند تمرير الفأرة على الصورة */
+.pic:hover {
+    transform: translateY(-10px); /* ترتفع للأعلى قليلاً */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* يقوى الظل */
+}
+
+/* تنسيق الصورة داخل الصندوق */
+.pic img {
+    width: 100%;
+    height: 350px; /* ارتفاع طولي وموحد */
+    object-fit: cover; /* لضمان عدم تشوه ملامح العروس أو الصور */
+    display: block;
+}
+
+/* تنسيق الأزرار لتتناسق مع التصميم الجديد */
+
+.my-button:hover {
+    background-color: #8e735d;
+    transform: scale(1.05);
+}

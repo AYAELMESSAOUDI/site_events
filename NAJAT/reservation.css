@@ -1,0 +1,60 @@
+/* Couleur de fond */
+body{
+    background-color: #8e735d;
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+/* Titre */
+h1{
+    color: #8b0000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Paragraphe */
+p{
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Formulaire */
+form{
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+/* Labels */
+label{
+    font-weight: bold;
+}
+
+/* Inputs et textarea */
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+/* Bouton */
+input[type="submit"]{
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Effet bouton */
+input[type="submit"]:hover{
+    background-color: #b22222;
+}
