@@ -8,6 +8,23 @@
     --brun-sombre: #D4AF37;
     --blanc-pur: #FFFFFF;
 }
+.success-bar {
+    position: fixed;
+    top: -100px; /* Caché au début */
+    left: 0;
+    width: 100%;
+    background-color: #2D5A4C; /* Ton vert cool */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    transition: top 0.5s ease-in-out; /* Animation de descente */
+    z-index: 9999;
+}
+
+.success-bar.show {
+    top: 0; /* Devient visible */
+}
 header {
     font-weight: bold;
     display: flex;
@@ -124,7 +141,12 @@ header nav ul li a:hover {
     border: 2px solid var(--beige-moyen);
     margin-top: 20px;
 }
-
+.map-container{
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 /* Boite du Formulaire */
 .contact-form-box {
     background-color: white;
