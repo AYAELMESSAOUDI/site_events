@@ -63,7 +63,11 @@ nav ul li a {
     font-size: 1rem;
     transition: color 0.3s ease;
 }
-
+nav a.active {
+  color: var(--brun-sombre) !important;
+  font-weight: bold;
+  border-bottom: 2px solid var(--brun-sombre);
+}
 header nav ul li a:hover {
     color: var(--brun-sombre) !important;
     cursor: pointer;

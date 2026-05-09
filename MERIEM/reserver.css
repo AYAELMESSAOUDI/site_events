@@ -144,7 +144,7 @@ input, select {
 .btn-pay {
     width: 100%;
     padding: 15px;
-    background-color: var(--brun-sombre); /* Couleur dorée de votre bouton "Réserver" */
+    background-color: var(--brun-maroc); 
     color: white;
     border: none;
     border-radius: 30px;
@@ -154,7 +154,7 @@ input, select {
     margin-top: 20px;
 }
 
-.btn-pay:hover { background-color: var(--brun-maroc); transform: translateY(-2px); }
+.btn-pay:hover { background-color: var(--brun-sombre); transform: translateY(-2px); }
 
 footer {
     background-color: var(--brun-maroc); 

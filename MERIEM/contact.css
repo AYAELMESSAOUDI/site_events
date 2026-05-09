@@ -26,6 +26,7 @@
     top: 0; /* Devient visible */
 }
 header {
+   
     font-weight: bold;
     display: flex;
     justify-content: space-between;
@@ -46,7 +47,6 @@ header {
     gap: 5px;
 }
 
-
 .logo-text {
     padding-right: 0px;
     font-style: italic;
@@ -55,7 +55,6 @@ header {
     font-weight: bold;
     color: var(--brun-maroc);
 }
-
 nav ul {
     display: flex;
     list-style: none;
@@ -70,7 +69,11 @@ nav ul li a {
     font-size: 1rem;
     transition: color 0.3s ease;
 }
-
+nav a.active {
+  color: var(--brun-sombre);
+  font-weight: bold;
+  border-bottom: 2px solid var(--brun-sombre);
+}
 header nav ul li a:hover {
     color: var(--brun-sombre) !important;
     cursor: pointer;
