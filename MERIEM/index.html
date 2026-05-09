@@ -15,9 +15,9 @@
         <nav>
             <ul>
                 <li><a href="index.html" class="active"><b>Accueil</b></a></li>
-                <li><a href="services.html"><b>Services</b></a></li>
+                <li><a href="/AYA/Aya.html"><b>Services</b></a></li>
                 <li><a href="/NAJAT/galerie.html"><b>Galerie</b></a></li>
-                <li><a href="apropos.html" ><b>A propos</b></a></li>
+                <li><a href="/AYA/apropos.html" ><b>A propos</b></a></li>
                 <li><a href="contact.html"><b>Contact</b></a></li>
 
             </ul>
@@ -30,7 +30,7 @@
             <h1>Créez des moments <br><span>Inoubliables</span></h1>
             <p>L'art de l'événementiel au cœur du Maroc. Nous transformons vos rêves en expériences magiques avec une élégance intemporelle.</p>
             <div class="hero-btns">
-                <a href="services.html" class="btn-primary">Nos Services</a>
+                <a href="/AYA/Aya.html" class="btn-primary">Nos Services</a>
                 <a href="/NAJAT/galerie.html" class="btn-secondary">Voir nos réalisations</a>
             </div>
         </div>
@@ -46,9 +46,9 @@
             <h4>Navigation</h4>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="services.html">Nos Services</a></li>
+                <li><a href="/AYA/Aya.html">Nos Services</a></li>
                 <li><a href="/NAJAT/galerie.html">Galerie</a></li>
-                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="/AYA/apropos.html">À propos</a></li>
             </ul>
         </div>
 
@@ -66,5 +66,26 @@
         <p>&copy; 2026 Your Events — Passion & Excellence. Tous droits réservés.</p>
     </div>
 </footer>
+<script>
+const scrollBtn = document.createElement('button');
+scrollBtn.innerHTML = '↑';
+scrollBtn.style.cssText = `
+  position: fixed; bottom: 30px; right: 30px;
+  width: 50px; height: 50px; border-radius: 50%;
+  background: #2D5A4C; color: #D4AF37;
+  border: 2px solid #D4AF37; font-size: 1.3rem;
+  cursor: pointer; opacity: 0;
+  transition: opacity 0.3s; z-index: 9999;
+`;
+document.body.appendChild(scrollBtn);
+
+window.addEventListener('scroll', () => {
+  scrollBtn.style.opacity = window.scrollY > 400 ? '1' : '0';
+});
+
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 </body>
 </html>
