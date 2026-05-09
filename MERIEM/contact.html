@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Your Events</title>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <div id="success-bar" class="success-bar">
+    Votre message a été envoyé avec succès ! ✨
+</div>
    <header>
         <div class="logo">
             <span class="logo-text">Your <br>&nbsp;&nbsp;&nbsp;&nbsp;Events</span>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active"><b>Accueil</b></a></li>
-                <li><a href="services.html"><b>Services</b></a></li>
-                <li><a href="galerie.html"><b>Galerie</b></a></li>
-                <li><a href="apropos.html" ><b>A propos</b></a></li>
-                <li><a href="contact.html"><b>Contact</b></a></li>
+                <li><a href="index.html" ><b style="font-size: larger;">Accueil</b></a></li>
+                <li><a href="services.html"><b style="font-size: larger;">Services</b></a></li>
+                <li><a href="galerie.html"><b style="font-size: larger;">Galerie</b></a></li>
+                <li><a href="apropos.html" ><b style="font-size: larger;">A propos</b></a></li>
+                <li><a href="contact.html" class="active"><b style="font-size: larger;">Contact</b></a></li>
 
             </ul>
         </nav>
@@ -41,13 +44,16 @@
                 <h4>Localisation</h4>
                 <p>Casablanca, Maroc</p>
             </div>
-            <div class="map-placeholder">
-                <span><i class="map-icon">📍</i> Voir sur la carte</span>
+            
+                <div class="map-container" >
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212752.96934555867!2d-7.751810247984294!3d33.572464368402905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca!5e0!3m2!1sfr!2sma!4v1778264900787!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                
             </div>
         </div>
 
         <div class="contact-form-box">
-            <form>
+            <form id="contact-form">
                 <div class="form-group">
                     <label><b>Nom complet</b></label>
                     <input type="text" placeholder="Votre nom" required>
@@ -68,7 +74,7 @@
                     <label><b>Votre Message</b></label>
                     <textarea rows="5" placeholder="Décrivez vos rêves..."></textarea>
                 </div>
-                <button type="submit" class="btn-submit">Envoyer le message</button>
+                <button type="submit" id="btn-envoyer" class="btn-submit">Envoyer le message</button>
             </form>
         </div>
     </section>
@@ -103,5 +109,6 @@
         <p>&copy; 2026 Your Events — Passion & Excellence. Tous droits réservés.</p>
     </div>
 </footer>
+<script src="contact.js"></script>
 </body>
 </html>

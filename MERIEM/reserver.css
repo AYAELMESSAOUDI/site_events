@@ -1,5 +1,3 @@
-/* --- PAGE CONTACT STYLES --- */
-/* --- Variables de Palette Beige --- */
 :root {
     --beige-clair: #F5F5DC;
     --beige-moyen: #EADDCA;
@@ -8,22 +6,18 @@
     --brun-sombre: #D4AF37;
     --blanc-pur: #FFFFFF;
 }
-.success-bar {
-    position: fixed;
-    top: -100px; /* Caché au début */
-    left: 0;
-    width: 100%;
-    background-color: #2D5A4C; /* Ton vert cool */
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-    transition: top 0.5s ease-in-out; /* Animation de descente */
-    z-index: 9999;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.success-bar.show {
-    top: 0; /* Devient visible */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--beige-clair);
+    color: var(--brun-maroc);
+    line-height: 1.6;
 }
 header {
    
@@ -69,11 +63,7 @@ nav ul li a {
     font-size: 1rem;
     transition: color 0.3s ease;
 }
-nav a.active {
-  color: var(--brun-sombre);
-  font-weight: bold;
-  border-bottom: 2px solid var(--brun-sombre);
-}
+
 header nav ul li a:hover {
     color: var(--brun-sombre) !important;
     cursor: pointer;
@@ -95,139 +85,92 @@ header nav ul li a:hover {
     border: 2px solid var(--brun-maroc);
     transform: scale(1.05);
 }
-
-.contact-hero {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: var(--beige-clair);
-}
-
-.contact-hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: var(--brun-maroc); /* Ton Vert Cool */
-}
-
-.contact-hero h1 span {
-    color: var(--brun-sombre); /* Ton Gold */
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 50px;
-    padding: 60px 8%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Infos à gauche */
-.contact-info .info-item {
-    margin-bottom: 30px;
-}
-
-.contact-info h4 {
-    color: var(--brun-sombre);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-}
-
-.map-placeholder {
-    width: 100%;
-    height: 250px;
-    background-color: #e0e0e0;
+.reservation-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    border: 2px solid var(--beige-moyen);
-    margin-top: 20px;
+    padding: 50px 20px;
+    background-color: #f9f7f2;
 }
-.map-container{
-    width: 100%;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-/* Boite du Formulaire */
-.contact-form-box {
-    background-color: white;
+
+.reservation-card {
+    background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(45, 90, 76, 0.1);
-    border-top: 4px solid var(--brun-sombre); /* Rappel Or */
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--brun-maroc);
-}
-
-.form-group input, .form-group select, .form-group textarea {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 500px;
     width: 100%;
+}
+
+h1 { color: var(--brun-maroc); font-family: 'Playfair Display', serif; text-align: center; }
+h3 { border-bottom: 2px solid var(--brun-sombre); padding-bottom: 10px; margin-top: 30px; color: var(--brun-maroc); }
+
+.input-group { margin-bottom: 20px; display: flex; flex-direction: column; }
+label { font-size: 0.9rem; margin-bottom: 5px; font-weight: bold; }
+
+input, select {
     padding: 12px;
-    border: 1px solid var(--beige-moyen);
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
 }
 
-.form-group input:focus, .form-group textarea:focus {
-    border-color: var(--brun-sombre);
-}
+.form-row { display: flex; gap: 20px; }
 
-.btn-submit {
-    width: 100%;
-    background-color: var(--brun-maroc);
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
+.card-icons { display: flex;
+    align-items: center;
+     gap: 20px; margin-bottom: 20px; }
+.card-icons img { height: 20px; opacity: 0.7; }
+
+.hidden-radio{
+    display: none;
+}
+.hidden-radio:checked + label img{
+    border: 2px solid #0056b3;
+    box-shadow: 0px 0px 10px rgba(0,86,179,0.5);
+    transform :scale(1.05);
+}
+.card-option img{
+    width: 50px;
     cursor: pointer;
+    border: 2px solid transparent;
+    padding: 5px;
+    border-radius: 8px;
     transition: 0.3s;
 }
-
-.btn-submit:hover {
-    background-color: var(--brun-sombre);
-    transform: translateY(-2px);
+.card-option input{
+     border-color: #007bff;
+     background-color: #f0f7ff;
+}
+.btn-pay {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--brun-maroc); 
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
 }
 
-/* RESPONSIVE CONTACT */
-@media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        padding: 40px 5%;
-    }
-    
-    .contact-hero h1 {
-        font-size: 2.2rem;
-    }
-}
+.btn-pay:hover { background-color: var(--brun-sombre); transform: translateY(-2px); }
+
 footer {
-    background-color: #2D5A4C; /* Ton VERT COOL profond */
-    color: #FDFBF7;           /* Texte BEIGE CLAIR */
+    background-color: var(--brun-maroc); 
+    color: #FDFBF7;        
     padding: 60px 8% 20px;
     font-family: 'Poppins', sans-serif;
-    border-top: 4px solid #D4AF37; /* Ligne fine GOLD en haut */
+    border-top: 4px solid var(--brun-sombre); 
 }
 
 .footer-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr; /* Structure en colonnes */
+    grid-template-columns: 2fr 1fr 1fr; 
     gap: 40px;
     padding-bottom: 40px;
 }
 
-/* Style du Logo dans le footer */
 .footer-logo {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
@@ -236,7 +179,7 @@ footer {
 }
 
 .footer-logo span {
-    color: #D4AF37; /* "Events" en GOLD */
+    color: #D4AF37; 
 }
 
 .footer-column p {
@@ -247,7 +190,7 @@ footer {
 
 /* Titres des colonnes */
 .footer-column h4 {
-    color: #D4AF37; /* Titres en GOLD */
+    color: #D4AF37; 
     font-size: 1.1rem;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -257,9 +200,6 @@ footer {
 /* Listes de liens */
 .footer-column ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
 }
 
 .footer-column ul li {

@@ -9,54 +9,98 @@
     }
 }
 body {
-    background-color: #6f4e37; 
+    background-color: #FDFBF7; 
     font-family: 'Playfair Display', serif; 
     color: #f4ede4; 
 }
-.hero-section{
-    position:relative;
-    width:100%;
-    height: 500px;
-    overflow:hidden; /*pour éviter que l'image ne sorte du cadre*/
+header {
+   
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: rgba(255, 255, 255 , 0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid var(--brun-sombre);
+    top: 0;
+    z-index: 1000;
 }
-.hero-section img{
-    width:100%;
-    height: 100%;
-    object-fit: cover;/*l'image couvre l'espace sans se déformer de manière excessive*/
-}
-.centred-title{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
-    font-size: 3rem;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    margin: 0;
-    text-transform: uppercase;
-}
-.button-group{
-    justify-content: center;
+.logo {
     display: flex;
     align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    justify-content: flex-start;
-    margin-top: 40px;
-
+    gap: 5px;
 }
+
+.logo-text {
+    padding-right: 0px;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:#2D5A4C;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2D5A4C;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #2D5A4C !important;
+    cursor: pointer;
+ /* Petit effet au survol */
+}
+.btn-reserve {
+    background-color: #2D5A4C;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease ;
+    border : 2px solid transparent;
+}
+.btn-reserve:hover{
+    background-color: #2D5A4C;
+    color: #D4AF37;
+    border: 2px solid var(--brun-maroc);
+    transform: scale(1.05);
+}
+
+.active { color: #D4AF37 !important; border-bottom: 2px solid var(--primary-color); }
+
+.button-group{
+  padding: 10px 25px;
+    margin: 5px;
+    border: 2px solid var(--brun-maroc);
+    background: transparent;
+    color: var(--brun-maroc);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-weight: 600;
+}
+ 
 .hide{
     display: none;
 }
 .my-button{
-    background-color: #b39177;
+    background-color: #2D5A4C;
     color: white;
     border: none;
-    margin-left: 25px;
+    margin-left: 100px;
     margin-right: 25px;
     padding: 10px 80px;
     border-radius: 5px;
@@ -65,44 +109,209 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-/* تنسيق حاوية المعرض */
 .gallery {
     display: grid;
-    /* إنشاء 3 أعمدة متساوية، وفي الشاشات الصغيرة تصبح عمود واحد تلقائياً */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-    gap: 25px; /* مسافة أنيقة بين الصور */
+    gap: 25px; 
     padding: 40px 10%;
-    background-color: #6f4e37; /* لون خلفية هادئ يشبه المتاحف */
+    background-color: #2D5A4C; 
 }
 
-/* تنسيق صندوق الصورة الواحدة */
 .pic {
-    background: #6f4e37;
-    border-radius: 20px; /* زوايا دائرية ناعمة مثل الصورة التي أرفقتها */
+    background: #2D5A4C;
+    border-radius: 20px; 
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* ظل خفيف جداً يعطي فخامة */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
     border: 1px solid #eee;
 }
-
-/* تأثير عند تمرير الفأرة على الصورة */
 .pic:hover {
-    transform: translateY(-10px); /* ترتفع للأعلى قليلاً */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* يقوى الظل */
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); 
 }
 
-/* تنسيق الصورة داخل الصندوق */
 .pic img {
     width: 100%;
-    height: 350px; /* ارتفاع طولي وموحد */
-    object-fit: cover; /* لضمان عدم تشوه ملامح العروس أو الصور */
+    height: 350px; 
+    object-fit: cover; 
     display: block;
 }
 
-/* تنسيق الأزرار لتتناسق مع التصميم الجديد */
-
 .my-button:hover {
-    background-color: #8e735d;
+    background-color: #D4AF37;
     transform: scale(1.05);
+}
+
+.gallery-container {
+  max-width: 600px;
+ height: 250px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.main-display {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.main-display img {
+  width: 100%;
+  border-radius: 15px; /* Bordures arrondies */
+  height:500px;
+  object-fit: cover;
+}
+
+/* Flèches */
+.prev, .next {
+  position: absolute;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 2;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Miniatures */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.thumb.active, .thumb:hover {
+  opacity: 1;
+  border: 2px solid #D4AF37;
+}
+
+/* Séparateur avec étoile */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.divider::before, .divider::after {
+  content: "";
+  height: 1px;
+  background: #D4AF37;
+  flex: 1;
+  margin: 0 15px;
+}
+footer {
+    clear:both;
+    background-color: #2D5A4C; /* Ton VERT COOL profond */
+    color: #FDFBF7;           /* Texte BEIGE CLAIR */
+    padding: 60px 8% 20px;
+    font-family: 'Poppins', sans-serif;
+    border-top: 4px solid #D4AF37; /* Ligne fine GOLD en haut */
+    position: relative;
+    margin-top: 450px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Structure en colonnes */
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+/* Style du Logo dans le footer */
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #FDFBF7;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #D4AF37; /* "Events" en GOLD */
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* Titres des colonnes */
+.footer-column h4 {
+    color: #D4AF37; /* Titres en GOLD */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Listes de liens */
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #FDFBF7;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #D4AF37;
+    padding-left: 5px; /* Petit effet au survol */
+}
+
+/* Réseaux sociaux */
+.social-icons a {
+    display: block;
+    color: #FDFBF7;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.social-icons a:hover {
+    color: #D4AF37;
+}
+
+/* Barre de copyright tout en bas */
+.footer-bottom {
+    border-top: 1px solid rgba(211, 175, 55, 0.2); /* Ligne GOLD très discrète */
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+/* --- Rendre le footer RESPONSIVE (Mobile) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Une seule colonne sur téléphone */
+        text-align: center;
+    }
+}
+.year{
+    color:#D4AF37;
 }

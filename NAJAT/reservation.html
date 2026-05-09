@@ -1,59 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Réservation Officielle - Najat Events</title>
     <link rel="stylesheet" href="reservation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Titre -->
-    <h1>Créer mon événement</h1>
 
-    <p>
-        Remplissez ce formulaire pour organiser votre événement.
-    </p>
+<div class="booking-container">
+    <div class="booking-content">
+        
+        <div class="form-section">
+            <h2><i class="fa-solid fa-calendar-check"></i> Détails de Réservation</h2>
+            <div class="reservation-header">
+    <p class="form-subtitle">Remplissez les détails ci-dessous pour bloquer votre date.</p>
+</div>
+            <form id="booking-form">
+                <div class="grid-inputs">
+                    <div class="input-group">
+                        <label>Nom Complet</label>
+                        <input type="text" placeholder="Non Prenon" required>
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="Client@gmail.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Téléphone</label>
+                        <input type="tel" placeholder="06XXXXXXXX" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Ville</label>
+                        <input type="text" placeholder="votre ville">
+                    </div>
+                </div>
 
-    <!-- Formulaire -->
-    <form>
+                <div class="input-group">
+                    <label>Choisir l'Événement</label>
+                    <select id="event-select" onchange="updatePrice()" required>
+                        <option value="" data-price="0">Sélectionnez...</option>
+                        <option value="mariage" data-price="5000">Mariage (Pack Complet)</option>
+                        <option value="fiancailles" data-price="3000">Fiançailles</option>
+                        <option value="anniversaire" data-price="1500">Anniversaire</option>
+                    </select>
+                </div>
 
-        <label>Nom complet :</label><br>
-        <input type="text" placeholder="Votre nom"><br><br>
+                <div class="input-group">
+                    <label>Date de l'événement</label>
+                    <input type="date" required>
+                </div>
+            </form>
+        </div>
 
-        <label>Email :</label><br>
-        <input type="email" placeholder="Votre email"><br><br>
+        <div class="payment-section">
+            <div class="summary-card">
+                <h3>Votre Panier</h3>
+                <div class="summary-line">
+                    <span>Prix Total :</span>
+                    <strong id="total-price">0 MAD</strong>
+                </div>
+                <div class="summary-line">
+                    <span>Acompte (30%) :</span>
+                    <strong id="deposit-price">0 MAD</strong>
+                </div>
+                <p class="small-text">* L'acompte est nécessaire pour confirmer la date.</p>
+            </div>
 
-        <label>Type d'événement :</label><br>
+            <div class="payment-modes">
+    <h4>Choisir le mode de paiement</h4>
+    <div class="modes-container">
+        <label class="mode-item">
+            <input type="radio" name="payment" checked>
+            <span class="mode-box">
+                <i class="fas fa-credit-card"></i> Carte Bancaire
+            </span>
+        </label>
+        
+        <label class="mode-item">
+            <input type="radio" name="payment">
+            <span class="mode-box">
+                <i class="fab fa-paypal"></i> PayPal
+            </span>
+        </label>
 
-        <select>
-            <option>Mariage</option>
-            <option>Fiançailles</option>
-            <option>bain</option>
-            <option>hanna</option>
-        </select>
+        <label class="mode-item">
+            <input type="radio" name="payment">
+            <span class="mode-box">
+                <i class="fas fa-money-bill-wave"></i> Virement
+            </span>
+        </label>
+    </div>
+</div>
+            <div class="card-details">
+                <h4>Paiement par Carte</h4>
+                <input type="text" placeholder="Numéro de carte" class="full-width">
+                <div class="row">
+                    <input type="text" placeholder="MM/YY">
+                    <input type="text" placeholder="CVC">
+                </div>
+                <button type="button" class="btn-pay">Confirmer et Payer</button>
+            </div>
+        </div>
 
-        <br><br>
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-column brand">
+            <h3 class="footer-logo">Your <span>Events</span></h3>
+            <p>L'art de l'événementiel au cœur du Maroc. Nous créons des souvenirs qui durent toute une vie.</p>
+        </div>
 
-        <label>Date :</label><br>
-        <input type="date"><br><br>
+        <div class="footer-column links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Nos Services</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+            </ul>
+        </div>
 
-        <label>Message :</label><br>
+        <div class="footer-column social">
+            <h4>Suivez-nous</h4>
+            <div class="social-icons">
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </div>
 
-        <textarea rows="5" cols="40"
-        placeholder="Votre message">
-        </textarea>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Your Events — Passion & Excellence. Tous droits réservés.</p>
+    </div>
+</footer>
+<script>
+    function updatePrice() {
+        const select = document.getElementById('event-select');
+        const totalPriceDisplay = document.getElementById('total-price');
+        const depositDisplay = document.getElementById('deposit-price');
+        
+        // جلب الثمن من الخاصية data-price
+        const price = parseInt(select.options[select.selectedIndex].getAttribute('data-price'));
+        
+        // حساب العربون (30%)
+        const deposit = price * 0.3;
 
-        <br><br>
-
-        <input type="submit" value="Envoyer">
-
-    </form>
-
-    <br>
-
-    <a href="galerie.html">
-        Voir la galerie
-    </a>
+        totalPriceDisplay.innerText = price + " MAD";
+        depositDisplay.innerText = deposit.toFixed(0) + " MAD";
+    }
+</script>
 
 </body>
 </html>

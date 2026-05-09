@@ -9,68 +9,114 @@
 </head>
 <body>
     <script src="galerie.js"></script>
-    <header class="hero-section">
-    <img src="https://www.casablancax.com/wp-content/uploads/2023/06/moroccan-bridal-wedding-day.jpg" alt="Gallerie Image">
-    <h1 class="centred-title">Gallerie</h1>
+     <header>
+        <div class="logo">
+            <span class="logo-text">Your <br>&nbsp;&nbsp;&nbsp;&nbsp;Events</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"><b>Accueil</b></a></li>
+                <li><a href="services.html"><b>Services</b></a></li>
+                <li><a href="galerie.html"><b>Galerie</b></a></li>
+                <li><a href="apropos.html" ><b>A propos</b></a></li>
+                <li><a href="contact.html"><b>Contact</b></a></li>
 
-</header>
+            </ul>
+        </nav>
+    <a href="reserver.html" class="btn-reserve">Réserver</a>
+    </header>
 <br>
 <div class="button-group">
-<button class="my-button" data-filter="All" type="button">All</button>
 <button class="my-button" data-filter="mariage" type="button">Mariages</button>
-<button class="my-button" data-filter="Bain" type="button">Bain Marocain</button>
-<button class="my-button" data-filter="Salle" type="button">Salle de mariage</button>
+<button class="my-button" data-filter="Fiançailles" type="button">Fiançailles</button>
+<button class="my-button" data-filter="Anniversaires" type="button">Anniversaires</button>
 </div>
 
 </div>
-<div class="gallery">
-    <div class="pic item-mariage"> <img src="images/mariage-album/mm.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/1.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/2.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/3.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/m8.jpg"> </div>
-     <div class="pic item-mariage"> <img src="images/mariage-album/m0.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/m1.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/M.jpg"> </div>
-     <div class="pic item-mariage"> <img src="images/mariage-album/m2.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/m3.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/m4.jpg"> </div>
-     <div class="pic item-mariage"> <img src="images/mariage-album/m5.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/m6.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/mm.jpg"> </div>
-    <div class="pic item-mariage"> <img src="images/mariage-album/MMM.jpg"> </div>
-   
-      <div class="pic item-bain"> <img src="images/bain-album/4.jpg"> </div>
-        <div class="pic item-bain"> <img src="images/bain-album/5.jpg"> </div>
-          <div class="pic item-bain"> <img src="images/bain-album/6.jpg"> </div>
-            <div class="pic item-bain"> <img src="images/bain-album/7.jpg"> </div>
-              <div class="pic item-bain"> <img src="images/bain-album/8.jpg"> </div>
-                <div class="pic item-bain"> <img src="images/bain-album/9.jpg"> </div>
-                  <div class="pic item-bain"> <img src="images/bain-album/10.jpg"> </div>
-                    <div class="pic item-bain"> <img src="images/bain-album/11.jpg"> </div>
-                      <div class="pic item-bain"> <img src="images/bain-album/12.jpg"> </div>
-                       <div class="pic item-bain"> <img src="images/bain-album/1.jpg"> </div>
-                        <div class="pic item-bain"> <img src="images/bain-album/2.jpg"> </div>
-                          <div class="pic item-bain"> <img src="images/bain-album/3.jpg"> </div>
-                           <div class="pic item-bain"> <img src="images/bain-album/13.jpg"> </div>
-    <div class="pic item-bain"> <img src="images/bain-album/14.jpg"> </div>
-    <div class="pic item-bain"> <img src="images/bain-album/15.jpg"> </div>
-     <div class="pic item-bain"> <img src="images/bain-album/16.jpg"> </div>
-    <div class="pic item-bain"> <img src="images/bain-album/17.jpg"> </div>
-    <div class="pic item-bain"> <img src="images/bain-album/18.jpg"> </div>
-     <div class="pic item-bain"> <img src="images/bain-album/19.jpg"> </div>
-    <div class="pic item-bain"> <img src="images/bain-album/20.jpg"> </div>
 
-     <div class="pic item-salle"> <img src="images/salle-album/S1.jpg"> </div>
-<div class="pic item-salle"> <img src="images/salle-album/S2.jpg"> </div>
-<div class="pic item-salle"> <img src="images/salle-album/S3.jpg"> </div>
-<div class="pic item-salle"> <img src="images/salle-album/S4.jpg"> </div>
-<div class="pic item-salle"> <img src="images/salle-album/S5.jpg"> </div>
-<div class="pic item-salle"> <img src="images/salle-album/S6.jpg"> </div>
-<div class="pic item-salle"> <img src="images/salle-album/S7.jpg"> </div>
-<div class="pic item-salle"> <img src="images/salle-album/S8.jpg"> </div>
-<div class="pic item-salle"> <img src="images/salle-album/S9.jpg"> </div>
-<div class="pic item-salle"> <img src="images/salle-album/S10.jpg"> </div>
+    <div class="gallery-container">
+  <div class="main-display">
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <img id="current-img" src="images/mariage-album/mm.jpg" alt="Art Gallery">
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+
+  <div class="gallery-info">
+    <h2 class="year">2026</h2>
+    <div class="divider">
+      <span>&#10038;</span>
     </div>
+  </div>
+
+  <div class="thumbnails">
+    <img class="thumb active" src="images/mariage-album/mm.jpg" onclick="setImg(0)">
+    <img class="thumb" src="images/mariage-album/1.jpg" onclick="setImg(1)">
+    <img class="thumb" src="images/mariage-album/2.jpg" onclick="setImg(2)">
+    <img class="thumb" src="images/mariage-album/3.jpg" onclick="setImg(3)">
+    <img class="thumb" src="images/bain-album/5.jpg" onclick="setImg(5)">
+    <img class="thumb" src="images/bain-album/7.jpg" onclick="setImg(6)">
+    <img class="thumb" src="images/bain-album/8.jpg" onclick="setImg(7)">
+    <img class="thumb" src="images/bain-album/9.jpg" onclick="setImg(8)">
+    <img class="thumb" src="images/salle-album/S4.jpg" onclick="setImg(13)">
+    <img class="thumb" src="images/salle-album/S5.jpg" onclick="setImg(14)">
+    <img class="thumb" src="images/salle-album/S6.jpg" onclick="setImg(15)">
+    <img class="thumb" src="images/salle-album/S7.jpg" onclick="setImg(16)">
+    <img class="thumb" src="images/mariage-album/m0.jpg" onclick="setImg(18)">
+    <img class="thumb" src="images/mariage-album/m1.jpg" onclick="setImg(19)">
+    <img class="thumb" src="images/mariage-album/m2.jpg" onclick="setImg(20)">
+     <img class="thumb active" src="images/Fiançailles/F1.jpg" onclick="setImg(0)">
+      <img class="thumb " src="images/Fiançailles/F2.jpg" onclick="setImg(1)">
+      <img class="thumb " src="images/Fiançailles/F3.jpg" onclick="setImg(2)">
+      <img class="thumb " src="images/Fiançailles/F4.jpg" onclick="setImg(3)">
+      <img class="thumb " src="images/Fiançailles/F5.jpg" onclick="setImg(4)">
+      <img class="thumb " src="images/Fiançailles/F6.jpg" onclick="setImg(5)">
+       <img class="thumb " src="images/Fiançailles/F7.jpg" onclick="setImg(6)">
+      <img class="thumb " src="images/Fiançailles/F8.jpg" onclick="setImg(7)">
+      
+     
+
+     <img class="thumb active" src="images/Anniversaires/H0.jpg" onclick="setImg(0)">
+     <img class="thumb " src="images/Anniversaires/H1.jpg" onclick="setImg(0)">
+     <img class="thumb" src="images/Anniversaires/H2.jpg" onclick="setImg(0)">
+      <img class="thumb " src="images/Anniversaires/H3.jpg" onclick="setImg(0)">
+     <img class="thumb" src="images/Anniversaires/H4.jpg" onclick="setImg(0)">
+      <img class="thumb " src="images/Anniversaires/H5.jpg" onclick="setImg(0)">
+     <img class="thumb" src="images/Anniversaires/H6.jpg" onclick="setImg(0)">
+      <img class="thumb " src="images/Anniversaires/H7.jpg" onclick="setImg(0)">
+    
+     
+  </div>
+</div>
+ <footer>
+    <div class="footer-container">
+        <div class="footer-column brand">
+            <h3 class="footer-logo">Your <span>Events</span></h3>
+            <p>L'art de l'événementiel au cœur du Maroc. Nous créons des souvenirs qui durent toute une vie.</p>
+        </div>
+
+        <div class="footer-column links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Nos Services</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column social">
+            <h4>Suivez-nous</h4>
+            <div class="social-icons">
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Your Events — Passion & Excellence. Tous droits réservés.</p>
+    </div>
+</footer>
 </body>
 </html>

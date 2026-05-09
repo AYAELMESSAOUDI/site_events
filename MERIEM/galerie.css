@@ -1,5 +1,3 @@
-/* --- PAGE CONTACT STYLES --- */
-/* --- Variables de Palette Beige --- */
 :root {
     --beige-clair: #F5F5DC;
     --beige-moyen: #EADDCA;
@@ -8,22 +6,18 @@
     --brun-sombre: #D4AF37;
     --blanc-pur: #FFFFFF;
 }
-.success-bar {
-    position: fixed;
-    top: -100px; /* Caché au début */
-    left: 0;
-    width: 100%;
-    background-color: #2D5A4C; /* Ton vert cool */
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-    transition: top 0.5s ease-in-out; /* Animation de descente */
-    z-index: 9999;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.success-bar.show {
-    top: 0; /* Devient visible */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--beige-clair);
+    color: var(--brun-maroc);
+    line-height: 1.6;
 }
 header {
    
@@ -70,7 +64,7 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 nav a.active {
-  color: var(--brun-sombre);
+  color: var(--brun-sombre) !important;
   font-weight: bold;
   border-bottom: 2px solid var(--brun-sombre);
 }
@@ -96,122 +90,70 @@ header nav ul li a:hover {
     transform: scale(1.05);
 }
 
-.contact-hero {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: var(--beige-clair);
-}
+.active { color: var(--brun-maroc) !important; border-bottom: 2px solid var(--primary-color); }
 
-.contact-hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: var(--brun-maroc); /* Ton Vert Cool */
-}
+/* Section Galerie */
+.gallery-section { padding: 60px 10%; text-align: center; }
+.gallery-section h1 { font-family: var(--brun-maroc); font-size: 2.5rem; color: var(--primary-color); }
+.subtitle { margin-bottom: 40px; color: #666; }
 
-.contact-hero h1 span {
-    color: var(--brun-sombre); /* Ton Gold */
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 50px;
-    padding: 60px 8%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Infos à gauche */
-.contact-info .info-item {
-    margin-bottom: 30px;
-}
-
-.contact-info h4 {
-    color: var(--brun-sombre);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-}
-
-.map-placeholder {
-    width: 100%;
-    height: 250px;
-    background-color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    border: 2px solid var(--beige-moyen);
-    margin-top: 20px;
-}
-.map-container{
-    width: 100%;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-/* Boite du Formulaire */
-.contact-form-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(45, 90, 76, 0.1);
-    border-top: 4px solid var(--brun-sombre); /* Rappel Or */
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 8px;
+/* Boutons Filtres */
+.filter-container { margin-bottom: 40px; }
+.filter-btn {
+    padding: 10px 25px;
+    margin: 5px;
+    border: 2px solid var(--brun-maroc);
+    background: transparent;
     color: var(--brun-maroc);
-}
-
-.form-group input, .form-group select, .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--beige-moyen);
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-}
-
-.form-group input:focus, .form-group textarea:focus {
-    border-color: var(--brun-sombre);
-}
-
-.btn-submit {
-    width: 100%;
-    background-color: var(--brun-maroc);
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.filter-btn.active, .filter-btn:hover {
+    background: var(--brun-maroc);
+    color: var(--blanc-pur) !important;
 }
 
-.btn-submit:hover {
-    background-color: var(--brun-sombre);
-    transform: translateY(-2px);
+/* Grille */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-/* RESPONSIVE CONTACT */
-@media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        padding: 40px 5%;
-    }
-    
-    .contact-hero h1 {
-        font-size: 2.2rem;
-    }
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 300px;
+    transition: transform 0.4s;
 }
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+/* Effet au survol */
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(45, 90, 100, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.overlay span { color: #fff; font-size: 1.2rem; font-weight: bold; }
+
+.gallery-item:hover .overlay { opacity: 1; }
+.gallery-item:hover img { transform: scale(1.1); }
+
 footer {
     background-color: #2D5A4C; /* Ton VERT COOL profond */
     color: #FDFBF7;           /* Texte BEIGE CLAIR */
@@ -257,9 +199,6 @@ footer {
 /* Listes de liens */
 .footer-column ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
 }
 
 .footer-column ul li {
@@ -306,5 +245,23 @@ footer {
     .footer-container {
         grid-template-columns: 1fr; /* Une seule colonne sur téléphone */
         text-align: center;
+    }
+}
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================================ */
+
+/* --- TABLETTES ET GRANDS MOBILES (Max 992px) --- */
+@media screen and (max-width: 992px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo-text {
+        padding-right: 20px; /* Réduction de l'espace important */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
     }
 }
