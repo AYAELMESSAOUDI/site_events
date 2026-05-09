@@ -5,18 +5,20 @@
 // ── 1. NAVBAR : change d'apparence au scroll ──
 const header = document.querySelector('header');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    header.style.backgroundColor = 'rgba(45, 90, 76, 0.97)'; // vert foncé au scroll
-    header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.2)';
-  } else {
-    header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)'; // blanc au départ
-    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
-  }
-});
+if (header) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      header.style.backgroundColor = 'rgba(45, 90, 76, 0.97)';
+      header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.2)';
+    } else {
+      header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+      header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+    }
+  });
+} // ← accolade fermante du if (header)
 
 
-// ── 2. SCROLL REVEAL : éléments qui apparaissent en scrollant ──
+// ── 2. SCROLL REVEAL ──
 const revealElements = document.querySelectorAll(
   '.card, .ye-hammam-card, .ye-rituel-card, .ye-feature, .ye-theme-card, .ye-sweet-card, .ye-anim-card, .ye-package, .category-header, .ye-section-head'
 );
@@ -24,7 +26,6 @@ const revealElements = document.querySelectorAll(
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      // Délai progressif pour chaque élément
       setTimeout(() => {
         entry.target.style.opacity = '1';
         entry.target.style.transform = 'translateY(0)';
@@ -42,24 +43,18 @@ revealElements.forEach(el => {
 });
 
 
-// ── 3. TABS ANNIVERSAIRE : navigation entre sections ──
+// ── 3. TABS ANNIVERSAIRE ──
 const tabs = document.querySelectorAll('.ye-tab');
 
 tabs.forEach(tab => {
   tab.addEventListener('click', (e) => {
     e.preventDefault();
-
-    // Retirer la classe active de tous les tabs
     tabs.forEach(t => t.classList.remove('active'));
-
-    // Ajouter active sur le tab cliqué
     tab.classList.add('active');
-
-    // Scroll doux vers la section ciblée
-    const targetId = tab.getAttribute('href'); // ex: #thematique
+    const targetId = tab.getAttribute('href');
     const targetSection = document.querySelector(targetId);
     if (targetSection) {
-      const offset = 100; // hauteur du header
+      const offset = 100;
       const top = targetSection.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -67,11 +62,10 @@ tabs.forEach(tab => {
 });
 
 
-// ── 4. COMPTEUR ANIMÉ (chiffres qui s'incrémentent) ──
+// ── 4. COMPTEUR ANIMÉ ──
 function animateCounter(el, target, duration = 1500) {
   let start = 0;
   const step = target / (duration / 16);
-
   const timer = setInterval(() => {
     start += step;
     if (start >= target) {
@@ -83,7 +77,6 @@ function animateCounter(el, target, duration = 1500) {
   }, 16);
 }
 
-// Observer pour déclencher les compteurs quand ils sont visibles
 const counters = document.querySelectorAll('.counter');
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -98,7 +91,7 @@ const counterObserver = new IntersectionObserver((entries) => {
 counters.forEach(c => counterObserver.observe(c));
 
 
-// ── 5. NAVBAR : lien actif selon la page courante ──
+// ── 5. LIEN ACTIF selon la page ──
 const currentPage = window.location.pathname.split('/').pop();
 const navLinks = document.querySelectorAll('nav ul li a');
 
@@ -110,12 +103,10 @@ navLinks.forEach(link => {
 });
 
 
-// ── 6. MENU BURGER pour mobile ──
-
-// Créer le bouton burger dynamiquement
+// ── 6. MENU BURGER mobile ──
 const nav = document.querySelector('nav');
 
-if (nav) {
+if (nav && header) {
   const burger = document.createElement('button');
   burger.innerHTML = '☰';
   burger.id = 'burger-btn';
@@ -130,10 +121,8 @@ if (nav) {
     border-radius: 4px;
   `;
 
-  // Insérer le burger avant la nav
   header.insertBefore(burger, nav);
 
-  // Afficher le burger seulement sur mobile
   const style = document.createElement('style');
   style.textContent = `
     @media (max-width: 768px) {
@@ -142,31 +131,22 @@ if (nav) {
       nav.open {
         display: block;
         position: absolute;
-        top: 70px;
-        left: 0; right: 0;
+        top: 70px; left: 0; right: 0;
         background: rgba(45, 90, 76, 0.98);
         padding: 20px;
         z-index: 999;
       }
-      nav.open ul {
-        flex-direction: column;
-        gap: 15px;
-      }
-      nav.open ul li a {
-        color: white !important;
-        font-size: 1rem;
-      }
+      nav.open ul { flex-direction: column; gap: 15px; }
+      nav.open ul li a { color: white !important; font-size: 1rem; }
     }
   `;
   document.head.appendChild(style);
 
-  // Toggle menu au clic
   burger.addEventListener('click', () => {
     nav.classList.toggle('open');
     burger.innerHTML = nav.classList.contains('open') ? '✕' : '☰';
   });
 
-  // Fermer le menu quand on clique sur un lien
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
@@ -176,46 +156,47 @@ if (nav) {
 }
 
 
-// ── 7. RETOUR EN HAUT (bouton scroll-to-top) ──
-const scrollBtn = document.createElement('button');
-scrollBtn.innerHTML = '↑';
-scrollBtn.id = 'scroll-top';
-scrollBtn.title = 'Retour en haut';
-scrollBtn.style.cssText = `
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--brun-maroc, #2D5A4C);
-  color: white;
-  border: 2px solid var(--brun-sombre, #D4AF37);
-  font-size: 1.2rem;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
-  z-index: 9999;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-`;
-document.body.appendChild(scrollBtn);
+// ── 5. BOUTON SCROLL TO TOP ──
+  const scrollBtn = document.createElement('button');
+  scrollBtn.innerHTML = '↑';
+  scrollBtn.setAttribute('aria-label', 'Retour en haut');
+  scrollBtn.style.cssText = `
+    position: fixed;
+    bottom: 30px; right: 30px;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: var(--brun-maroc, #2D5A4C);
+    color: var(--brun-sombre, #D4AF37);
+    border: 2px solid var(--brun-sombre, #D4AF37);
+    font-size: 1.3rem;
+    cursor: pointer;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 9999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    font-family: inherit;
+  `;
+  document.body.appendChild(scrollBtn);
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    scrollBtn.style.opacity = '1';
-    scrollBtn.style.transform = 'translateY(0)';
-  } else {
-    scrollBtn.style.opacity = '0';
-    scrollBtn.style.transform = 'translateY(10px)';
-  }
-});
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      scrollBtn.style.opacity = '1';
+      scrollBtn.style.pointerEvents = 'auto';
+      scrollBtn.style.transform = 'translateY(0)';
+    } else {
+      scrollBtn.style.opacity = '0';
+      scrollBtn.style.pointerEvents = 'none';
+      scrollBtn.style.transform = 'translateY(8px)';
+    }
+  }, { passive: true });
 
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
 
-// ── 8. CARTES : effet de survol avec son ombre dorée ──
+
+// ── 8. CARTES : ombre dorée au survol ──
 const cards = document.querySelectorAll('.card');
 cards.forEach(card => {
   card.addEventListener('mouseenter', () => {
@@ -227,23 +208,19 @@ cards.forEach(card => {
 });
 
 
-// ── 9. MESSAGE DE CONFIRMATION dans le formulaire ──
+// ── 9. FORMULAIRE : message de confirmation ──
 const form = document.querySelector('form');
 if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-
     const btn = form.querySelector('button[type="submit"], input[type="submit"]');
     const originalText = btn ? btn.textContent : '';
-
     if (btn) {
       btn.textContent = '✓ Message envoyé !';
       btn.style.backgroundColor = '#2D5A4C';
       btn.style.color = 'white';
       btn.disabled = true;
     }
-
-    // Remettre après 3 secondes
     setTimeout(() => {
       if (btn) {
         btn.textContent = originalText;
@@ -257,7 +234,7 @@ if (form) {
 }
 
 
-// ── 10. FOOTER : liens sociaux avec animation ──
+// ── 10. FOOTER : animation liens sociaux ──
 const socialLinks = document.querySelectorAll('.social-icons a');
 socialLinks.forEach(link => {
   link.addEventListener('mouseenter', () => {
