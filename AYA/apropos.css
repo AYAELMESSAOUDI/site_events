@@ -1,8 +1,4 @@
-/* ════════════════════════════════════════
-   apropos.css — YourEvents À Propos
-   ════════════════════════════════════════ */
 
-/* ── VARIABLES (cohérentes avec Aya.css) ── */
 :root {
     --gold-light:   #e6be8a;
     --gold-medium:  #c5a059;
@@ -16,8 +12,8 @@
     --text-gray:    #666666;
     --bg-creme:     #faf8f5;
 
-    --brun-maroc:  #2D5A4C;  /* Vert foncé */
-    --brun-sombre: #D4AF37;  /* Doré */
+    --brun-maroc:  #2D5A4C;  
+    --brun-sombre: #D4AF37;  
     --beige-clair: #F5F5DC;
 }
 
@@ -123,7 +119,7 @@ header nav ul li a:hover {
 
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: column; /* Empile sur téléphone */
+        flex-direction: column; 
         gap: 15px;
     }
     header h1 {
@@ -139,7 +135,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ── SCROLL REVEAL ── */
+
 .reveal {
     opacity: 0;
     transform: translateY(35px);
@@ -150,7 +146,7 @@ body {
     transform: translateY(0);
 }
 
-/* ── CONTAINERS ── */
+
 .ap-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -161,7 +157,7 @@ body {
     padding: 90px 0;
 }
 
-/* ── ÉLÉMENTS COMMUNS ── */
+
 .ap-section-tag {
     display: block;
     font-family: 'Cinzel', serif;
@@ -197,7 +193,7 @@ body {
     margin: 16px auto 0;
 }
 
-/* ── BOUTONS ── */
+
 .ap-btn-primary {
     display: inline-block;
     font-family: 'Cinzel', serif;
@@ -238,9 +234,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* ════════════════════════════════════════
-   HERO
-   ════════════════════════════════════════ */
+
 .ap-hero {
     min-height: 70vh;
     position: relative;
@@ -337,9 +331,7 @@ body {
     100% { opacity: 0; transform: translateY(-120px) scale(0.5); }
 }
 
-/* ════════════════════════════════════════
-   QUI SOMMES-NOUS
-   ════════════════════════════════════════ */
+
 .ap-about { background: var(--bg-creme); }
 
 .ap-about-grid {
@@ -411,7 +403,7 @@ body {
 }
 
 .ap-about-text {
-    padding-bottom: 40px; /* espace pour le badge */
+    padding-bottom: 40px; 
 }
 .ap-about-text p {
     font-size: 0.95rem;
@@ -420,9 +412,7 @@ body {
     margin-bottom: 16px;
 }
 
-/* ════════════════════════════════════════
-   STATS
-   ════════════════════════════════════════ */
+
 .ap-stats {
     position: relative;
     padding: 80px 0;
@@ -471,9 +461,7 @@ body {
     text-transform: uppercase;
 }
 
-/* ════════════════════════════════════════
-   VALEURS
-   ════════════════════════════════════════ */
+
 .ap-values { background: var(--beige-clair); }
 
 .ap-values-grid {
@@ -518,9 +506,7 @@ body {
     color: var(--text-gray);
 }
 
-/* ════════════════════════════════════════
-   ÉQUIPE
-   ════════════════════════════════════════ */
+
 .ap-team { background: var(--bg-creme); }
 
 .ap-team-grid {
@@ -594,9 +580,7 @@ body {
     color: var(--text-gray);
 }
 
-/* ════════════════════════════════════════
-   TIMELINE
-   ════════════════════════════════════════ */
+
 .ap-timeline-section { background: var(--beige-clair); }
 
 .ap-timeline {
@@ -659,9 +643,7 @@ body {
     color: var(--text-gray);
 }
 
-/* ════════════════════════════════════════
-   CTA SECTION
-   ════════════════════════════════════════ */
+
 .ap-cta-section {
     position: relative;
     padding: 120px 40px;
@@ -710,17 +692,13 @@ body {
     flex-wrap: wrap;
 }
 
-/* ════════════════════════════════════════
-   ANIMATIONS
-   ════════════════════════════════════════ */
+
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(28px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ════════════════════════════════════════
-   RESPONSIVE
-   ════════════════════════════════════════ */
+
 @media (max-width: 1024px) {
     .ap-values-grid { grid-template-columns: repeat(2, 1fr); }
     .ap-stats-grid  { grid-template-columns: repeat(2, 1fr); }
@@ -749,21 +727,21 @@ body {
     .ap-hero-title { font-size: 2.5rem; }
 }
 footer {
-    background-color: #2D5A4C; /* Ton VERT COOL profond */
-    color: #FDFBF7;           /* Texte BEIGE CLAIR */
+    background-color: #2D5A4C; 
+    color: #FDFBF7;           
     padding: 60px 8% 20px;
     font-family: 'Poppins', sans-serif;
-    border-top: 4px solid #D4AF37; /* Ligne fine GOLD en haut */
+    border-top: 4px solid #D4AF37; 
 }
 
 .footer-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr; /* Structure en colonnes */
+    grid-template-columns: 2fr 1fr 1fr; 
     gap: 40px;
     padding-bottom: 40px;
 }
 
-/* Style du Logo dans le footer */
+
 .footer-logo {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
@@ -772,7 +750,7 @@ footer {
 }
 
 .footer-logo span {
-    color: #D4AF37; /* "Events" en GOLD */
+    color: #D4AF37; 
 }
 
 .footer-column p {
@@ -781,16 +759,15 @@ footer {
     opacity: 0.8;
 }
 
-/* Titres des colonnes */
 .footer-column h4 {
-    color: #D4AF37; /* Titres en GOLD */
+    color: #D4AF37; 
     font-size: 1.1rem;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Listes de liens */
+
 .footer-column ul {
     list-style: none;
 }
@@ -808,10 +785,10 @@ footer {
 
 .footer-column ul li a:hover {
     color: #D4AF37;
-    padding-left: 5px; /* Petit effet au survol */
+    padding-left: 5px; 
 }
 
-/* Réseaux sociaux */
+
 .social-icons a {
     display: block;
     color: #FDFBF7;
@@ -825,9 +802,9 @@ footer {
     color: #D4AF37;
 }
 
-/* Barre de copyright tout en bas */
+
 .footer-bottom {
-    border-top: 1px solid rgba(211, 175, 55, 0.2); /* Ligne GOLD très discrète */
+    border-top: 1px solid rgba(211, 175, 55, 0.2); 
     padding-top: 20px;
     text-align: center;
     font-size: 0.8rem;

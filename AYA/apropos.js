@@ -1,10 +1,8 @@
-// ════════════════════════════════════════
-//   apropos.js — YourEvents À Propos
-// ════════════════════════════════════════
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── 1. PARTICULES DORÉES dans le Hero ──
+  
   const particlesContainer = document.getElementById('particles');
   if (particlesContainer) {
     for (let i = 0; i < 30; i++) {
@@ -79,14 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.counter').forEach(c => counterObserver.observe(c));
 
 
-  // ── 4. NAVBAR : change au scroll ──
+ 
   const header = document.getElementById('main-header');
   if (header) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 70) {
         header.style.backgroundColor = 'rgba(45, 90, 76, 0.97)';
         header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.25)';
-        // Texte liens blanc sur fond vert
+        
         document.querySelectorAll('nav ul li a').forEach(a => {
           a.style.color = 'rgba(245,245,220,0.9)';
         });
@@ -101,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ── 5. BOUTON SCROLL TO TOP ──
+  
   const scrollBtn = document.createElement('button');
   scrollBtn.innerHTML = '↑';
   scrollBtn.setAttribute('aria-label', 'Retour en haut');
@@ -140,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ── 6. MENU BURGER MOBILE ──
+ 
   const nav = document.getElementById('main-nav');
   if (nav && header) {
     const burger = document.createElement('button');
@@ -160,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     header.appendChild(burger);
 
-    // Style mobile injecté
+    
     const mobileStyle = document.createElement('style');
     mobileStyle.textContent = `
       @media (max-width: 768px) {
@@ -196,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.innerHTML = isOpen ? '✕' : '☰';
     });
 
-    // Fermer au clic sur un lien
+    
     nav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('ap-open');
@@ -206,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ── 7. CARDS ÉQUIPE : tilt léger au survol ──
+  
   document.querySelectorAll('.ap-team-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
@@ -220,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ── 8. TIMELINE : apparition avec délai progressif ──
+ 
   const timelineItems = document.querySelectorAll('.ap-timeline-item');
   const tlObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -236,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
   timelineItems.forEach(item => tlObserver.observe(item));
 
 
-  // ── 9. VALEURS : effet de surbrillance séquentiel au chargement ──
+ 
   const valueCards = document.querySelectorAll('.ap-value-card');
   const valuesSection = document.querySelector('.ap-values');
 
@@ -258,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ── 10. STATS : effet de pulsation sur les chiffres ──
+  
   document.querySelectorAll('.ap-stat-num').forEach(num => {
     num.addEventListener('mouseenter', () => {
       num.style.transition = 'transform 0.2s ease, color 0.2s ease';
