@@ -15,7 +15,7 @@
 }
 /* Style du Header */
 header {
-    background-image: url(back.jpg);
+    background-image: url(event.jpg);
     padding: 40px 20px;
     border-bottom: 2px solid #c5a059; /* Ligne dorée */
 }
@@ -61,7 +61,7 @@ header h1 {
 }
 /* 2. STYLE GÉNÉRAL */
 body {
-    background-img: url(Fond.jpg);
+    background-color:#ffffff;
     font-family: 'Montserrat', sans-serif;
     color: var(--text-black);
     margin: 0;
@@ -199,5 +199,1904 @@ h3 {
     .card {
         width: 100%;
         max-width: 500px;
+    }
+}
+/* ════════════════════════════════════════
+   services_yourevents.css
+   YourEvents — Services d'Exception
+   ════════════════════════════════════════ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0e0a06;
+    color: #e8dcc8;
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.ye-hero {
+    position: relative;
+    text-align: center;
+    padding: 5rem 2rem 4rem;
+    background: linear-gradient(180deg, #1a1108 0%, #0e0a06 100%);
+    border-bottom: 1px solid #b8913a33;
+    overflow: hidden;
+}
+
+.ye-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, #b8913a18 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ye-hero-ornament {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: #b8913a;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ye-hero-ornament::before,
+.ye-hero-ornament::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #b8913a);
+}
+
+.ye-hero-ornament::after {
+    background: linear-gradient(90deg, #b8913a, transparent);
+}
+
+.ye-hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 400;
+    color: #f0e4c8;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.ye-hero p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #b8913a;
+    letter-spacing: 2px;
+}
+
+/* ── MAIN CONTAINER ── */
+.ye-main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+}
+
+/* ── SECTION HEADERS ── */
+.ye-section {
+    padding: 3.5rem 0;
+}
+
+.ye-section-head {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.ye-section-head h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    font-weight: 400;
+    color: #f0e4c8;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.ye-section-head cite {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #9e7d43;
+    display: block;
+    line-height: 1.6;
+}
+
+.ye-gold-rule {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #b8913a, transparent);
+    margin: 1rem auto 0;
+}
+
+/* ── HAMMAM SECTION ── */
+.ye-hammam-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    align-items: center;
+}
+
+.ye-hammam-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #c9b98a;
+    margin-bottom: 1rem;
+}
+
+.ye-hammam-visual {
+    background: #1a1108;
+    border: 1px solid #b8913a33;
+    border-radius: 2px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.ye-hammam-icon {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 1rem;
+    filter: sepia(1) saturate(1.5) hue-rotate(5deg);
+}
+
+.ye-hammam-visual h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: #b8913a;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.ye-hammam-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.ye-hammam-card {
+    background: #13100a;
+    border: 1px solid #b8913a22;
+    border-top: 2px solid #b8913a66;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.ye-hammam-card:hover {
+    border-color: #b8913a88;
+    background: #1a1510;
+}
+
+.ye-hammam-card .card-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.ye-hammam-card h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #b8913a;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.ye-hammam-card p {
+    font-size: 0.95rem;
+    color: #9e8b6a;
+    line-height: 1.7;
+}
+
+/* ── RITUAL CARDS (HENNÉ) ── */
+.ye-rituel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.ye-rituel-card {
+    background: #13100a;
+    border: 1px solid #b8913a22;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.ye-rituel-card:hover {
+    border-color: #b8913a66;
+}
+
+.ye-rituel-img {
+    width: 100%;
+    height: 140px;
+    background: #1e1710;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border-bottom: 1px solid #b8913a22;
+    overflow: hidden;
+}
+
+.ye-rituel-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ye-rituel-info {
+    padding: 1.25rem;
+}
+
+.ye-rituel-info h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    color: #b8913a;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+}
+
+.ye-rituel-info p {
+    font-size: 0.92rem;
+    color: #9e8b6a;
+    line-height: 1.7;
+}
+
+/* ── FEATURE ITEMS (GRAND JOUR) ── */
+.ye-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.ye-feature {
+    background: #13100a;
+    border: 1px solid #b8913a22;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.ye-feature::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #b8913a66;
+    transition: width 0.3s;
+}
+
+.ye-feature:hover::after {
+    width: 80px;
+}
+
+.ye-feature:hover {
+    border-color: #b8913a55;
+}
+
+.ye-feature-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.ye-feature h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    color: #b8913a;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.ye-feature p {
+    font-size: 0.95rem;
+    color: #9e8b6a;
+    line-height: 1.7;
+}
+
+/* ── BANNER ── */
+.ye-banner {
+    background: #1a1108;
+    border: 1px solid #b8913a44;
+    border-left: 3px solid #b8913a;
+    padding: 1.25rem 1.75rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.ye-banner-star {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.ye-banner p {
+    font-size: 1rem;
+    color: #c9b98a;
+    line-height: 1.7;
+}
+
+.ye-banner strong {
+    color: #b8913a;
+    font-family: 'Cinzel', serif;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+}
+
+/* ── SEPARATOR ── */
+.ye-sep {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    color: #b8913a55;
+}
+
+.ye-sep span {
+    font-size: 1.2rem;
+}
+
+.ye-sep::before,
+.ye-sep::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #b8913a44, transparent);
+}
+
+/* ── BACK BUTTON ── */
+.ye-actions {
+    text-align: center;
+    padding: 2rem 0 0;
+}
+
+.ye-btn-back {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 4px;
+    color: #b8913a;
+    text-decoration: none;
+    border: 1px solid #b8913a44;
+    padding: 0.85rem 2.5rem;
+    text-transform: uppercase;
+    transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+
+.ye-btn-back:hover {
+    border-color: #b8913a;
+    background: #b8913a15;
+    color: #f0e4c8;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+    .ye-hammam-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .ye-hammam-grid,
+    .ye-rituel-grid,
+    .ye-features {
+        grid-template-columns: 1fr;
+    }
+}
+/* ════════════════════════════════════════
+   fiancailles_yourevents.css
+   YourEvents — Fiançailles d'Exception
+   ════════════════════════════════════════ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0e0a06;
+    color: #e8dcc8;
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.ye-hero {
+    position: relative;
+    text-align: center;
+    padding: 5rem 2rem 4rem;
+    background: linear-gradient(180deg, #160e14 0%, #0e0a06 100%);
+    border-bottom: 1px solid #c9849a33;
+    overflow: hidden;
+}
+
+.ye-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, #c9849a18 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ye-hero-ornament {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: #c9849a;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ye-hero-ornament::before,
+.ye-hero-ornament::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9849a);
+}
+
+.ye-hero-ornament::after {
+    background: linear-gradient(90deg, #c9849a, transparent);
+}
+
+.ye-hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 400;
+    color: #f5eaf0;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.ye-hero p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #c9849a;
+    letter-spacing: 2px;
+}
+
+/* ── MAIN CONTAINER ── */
+.ye-main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+}
+
+/* ── INTRO ── */
+.ye-intro {
+    text-align: center;
+    padding: 3rem 2rem 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.ye-intro p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #c9b98a;
+    font-style: italic;
+}
+
+/* ── TABS NAVIGATION ── */
+.ye-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 2rem 0 0;
+    border: 1px solid #c9849a33;
+}
+
+.ye-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9e7d8a;
+    text-decoration: none;
+    border-right: 1px solid #c9849a33;
+    transition: color 0.3s, background 0.3s;
+    flex: 1;
+    justify-content: center;
+}
+
+.ye-tab:last-child {
+    border-right: none;
+}
+
+.ye-tab:hover {
+    color: #f5eaf0;
+    background: #c9849a12;
+}
+
+.ye-tab.active {
+    color: #c9849a;
+    background: #c9849a0e;
+}
+
+.ye-tab-icon {
+    font-size: 1rem;
+}
+
+/* ── SECTION ── */
+.ye-section {
+    padding: 3.5rem 0;
+}
+
+.ye-section-head {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.ye-section-number {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #c9849a18;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: 4px;
+}
+
+.ye-section-head h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    font-weight: 400;
+    color: #f5eaf0;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.ye-section-head cite {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #9e7d8a;
+    display: block;
+    line-height: 1.6;
+}
+
+.ye-gold-rule {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9849a, transparent);
+    margin: 1rem auto 0;
+}
+
+/* ── BEAUTÉ INTRO ── */
+.ye-beaute-intro {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    align-items: center;
+}
+
+.ye-beaute-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #c9b98a;
+    margin-bottom: 1rem;
+}
+
+.ye-beaute-badge {
+    background: #160e14;
+    border: 1px solid #c9849a33;
+    border-top: 2px solid #c9849a;
+    padding: 1.5rem;
+    text-align: center;
+    min-width: 180px;
+}
+
+.ye-badge-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.ye-beaute-badge p {
+    font-size: 0.9rem;
+    color: #c9849a;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* ── CARDS GRID ── */
+.ye-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.ye-card {
+    background: #13100a;
+    border: 1px solid #c9849a22;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.ye-card:hover {
+    border-color: #c9849a66;
+}
+
+.ye-card-img {
+    width: 100%;
+    height: 140px;
+    background: #1e1018;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border-bottom: 1px solid #c9849a22;
+    overflow: hidden;
+}
+
+.ye-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ye-card-body {
+    padding: 1.25rem;
+}
+
+.ye-card-body h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    color: #c9849a;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+}
+
+.ye-card-body p {
+    font-size: 0.92rem;
+    color: #9e8b6a;
+    line-height: 1.7;
+}
+
+/* ── FEATURES ROW ── */
+.ye-features-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.ye-feature-mini {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    background: #13100a;
+    border: 1px solid #c9849a1a;
+    border-left: 2px solid #c9849a55;
+    padding: 1.1rem 1rem;
+}
+
+.ye-feat-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.ye-feature-mini h6 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #c9849a;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.ye-feature-mini p {
+    font-size: 0.88rem;
+    color: #9e8b6a;
+    line-height: 1.6;
+}
+
+/* ── DÉCO SHOWCASE ── */
+.ye-deco-showcase {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: start;
+}
+
+.ye-deco-visual {
+    background: #160e14;
+    border: 1px solid #c9849a33;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+
+.ye-deco-visual span {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.ye-deco-visual h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #c9849a;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.ye-deco-visual p {
+    font-size: 0.88rem;
+    color: #9e8b6a;
+    font-style: italic;
+}
+
+.ye-deco-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.ye-deco-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid #c9849a15;
+}
+
+.ye-deco-item:last-child {
+    border-bottom: none;
+}
+
+.ye-deco-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c9849a;
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+
+.ye-deco-item h6 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: #f5eaf0;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+}
+
+.ye-deco-item p {
+    font-size: 0.92rem;
+    color: #9e8b6a;
+    line-height: 1.6;
+}
+
+/* ── THEMES GRID ── */
+.ye-themes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.ye-theme-card {
+    background: #13100a;
+    border: 1px solid #c9849a22;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.ye-theme-card:hover {
+    border-color: #c9849a55;
+}
+
+.ye-theme-color {
+    height: 70px;
+    width: 100%;
+}
+
+.ye-theme-card h6 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: #c9849a;
+    font-weight: 400;
+    padding: 0.85rem 1rem 0.35rem;
+    text-transform: uppercase;
+}
+
+.ye-theme-card p {
+    font-size: 0.85rem;
+    color: #9e8b6a;
+    line-height: 1.6;
+    padding: 0 1rem 1rem;
+}
+
+/* ── TIMELINE ── */
+.ye-timeline {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.ye-timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, #c9849a55, #c9849a11);
+}
+
+.ye-timeline-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
+    position: relative;
+}
+
+.ye-timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.ye-timeline-marker {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #160e14;
+    border: 1px solid #c9849a44;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.ye-timeline-marker span {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: #c9849a;
+    font-weight: 400;
+}
+
+.ye-timeline-content {
+    background: #13100a;
+    border: 1px solid #c9849a1a;
+    border-left: 2px solid #c9849a44;
+    padding: 1.25rem 1.5rem;
+    flex: 1;
+    margin-top: 4px;
+}
+
+.ye-timeline-content h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #f5eaf0;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+}
+
+.ye-timeline-content p {
+    font-size: 0.95rem;
+    color: #9e8b6a;
+    line-height: 1.7;
+}
+
+/* ── ACCOMPAGNEMENT EXTRAS ── */
+.ye-accomp-extras {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.ye-extra-card {
+    background: #13100a;
+    border: 1px solid #c9849a22;
+    border-top: 2px solid #c9849a55;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.ye-extra-card:hover {
+    border-color: #c9849a88;
+    background: #1a1015;
+}
+
+.ye-extra-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.ye-extra-card h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    color: #c9849a;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+}
+
+.ye-extra-card p {
+    font-size: 0.92rem;
+    color: #9e8b6a;
+    line-height: 1.7;
+}
+
+/* ── BANNER ── */
+.ye-banner {
+    background: #160e14;
+    border: 1px solid #c9849a44;
+    border-left: 3px solid #c9849a;
+    padding: 1.25rem 1.75rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.ye-banner-star {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.ye-banner p {
+    font-size: 1rem;
+    color: #c9b98a;
+    line-height: 1.7;
+}
+
+.ye-banner strong {
+    color: #c9849a;
+    font-family: 'Cinzel', serif;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+}
+
+/* ── SEPARATOR ── */
+.ye-sep {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    color: #c9849a55;
+}
+
+.ye-sep span {
+    font-size: 1.2rem;
+}
+
+.ye-sep::before,
+.ye-sep::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9849a44, transparent);
+}
+
+/* ── CTA ── */
+.ye-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #160e14 0%, #0e0a06 100%);
+    border: 1px solid #c9849a22;
+    margin: 1rem 0 2rem;
+}
+
+.ye-cta-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: #f5eaf0;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.ye-btn-primary {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: #0e0a06;
+    background: #c9849a;
+    text-decoration: none;
+    border: 1px solid #c9849a;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
+}
+
+.ye-btn-primary:hover {
+    background: transparent;
+    color: #c9849a;
+}
+
+/* ── BACK BUTTON ── */
+.ye-actions {
+    text-align: center;
+    padding: 1rem 0 0;
+}
+
+.ye-btn-back {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 4px;
+    color: #c9849a;
+    text-decoration: none;
+    border: 1px solid #c9849a44;
+    padding: 0.85rem 2.5rem;
+    text-transform: uppercase;
+    transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+
+.ye-btn-back:hover {
+    border-color: #c9849a;
+    background: #c9849a15;
+    color: #f5eaf0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .ye-tabs {
+        flex-direction: column;
+    }
+
+    .ye-tab {
+        border-right: none;
+        border-bottom: 1px solid #c9849a33;
+        justify-content: flex-start;
+    }
+
+    .ye-tab:last-child {
+        border-bottom: none;
+    }
+
+    .ye-beaute-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .ye-cards-grid,
+    .ye-features-row,
+    .ye-accomp-extras {
+        grid-template-columns: 1fr;
+    }
+
+    .ye-deco-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .ye-themes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ye-timeline::before {
+        display: none;
+    }
+
+    .ye-timeline-item {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ye-themes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ════════════════════════════════════════
+   anniversaire_yourevents.css
+   YourEvents — Anniversaire d'Exception
+   ════════════════════════════════════════ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #06080e;
+    color: #e8dcc8;
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.ye-hero {
+    position: relative;
+    text-align: center;
+    padding: 5rem 2rem 4rem;
+    background: linear-gradient(180deg, #0d1020 0%, #06080e 100%);
+    border-bottom: 1px solid #7a9ac933;
+    overflow: hidden;
+}
+
+.ye-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, #7a9ac918 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ye-hero-ornament {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: #7a9ac9;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ye-hero-ornament::before,
+.ye-hero-ornament::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #7a9ac9);
+}
+
+.ye-hero-ornament::after {
+    background: linear-gradient(90deg, #7a9ac9, transparent);
+}
+
+.ye-hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 400;
+    color: #eaf0f8;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.ye-hero p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #7a9ac9;
+    letter-spacing: 2px;
+}
+
+/* ── MAIN CONTAINER ── */
+.ye-main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+}
+
+/* ── INTRO ── */
+.ye-intro {
+    text-align: center;
+    padding: 3rem 2rem 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.ye-intro p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #a8bcd4;
+    font-style: italic;
+}
+
+/* ── TABS NAVIGATION ── */
+.ye-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 2rem 0 0;
+    border: 1px solid #7a9ac933;
+}
+
+.ye-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #5a7a99;
+    text-decoration: none;
+    border-right: 1px solid #7a9ac933;
+    transition: color 0.3s, background 0.3s;
+    flex: 1;
+    justify-content: center;
+}
+
+.ye-tab:last-child {
+    border-right: none;
+}
+
+.ye-tab:hover {
+    color: #eaf0f8;
+    background: #7a9ac912;
+}
+
+.ye-tab.active {
+    color: #7a9ac9;
+    background: #7a9ac90e;
+}
+
+.ye-tab-icon {
+    font-size: 1rem;
+}
+
+/* ── SECTION ── */
+.ye-section {
+    padding: 3.5rem 0;
+}
+
+.ye-section-head {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.ye-section-number {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #7a9ac918;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: 4px;
+}
+
+.ye-section-head h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    font-weight: 400;
+    color: #eaf0f8;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.ye-section-head cite {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #5a7a99;
+    display: block;
+    line-height: 1.6;
+}
+
+.ye-gold-rule {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #7a9ac9, transparent);
+    margin: 1rem auto 0;
+}
+
+/* ── THEMES SHOWCASE ── */
+.ye-themes-showcase {
+    margin-bottom: 2rem;
+}
+
+.ye-themes-header p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #a8bcd4;
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 2rem;
+}
+
+/* ── THEMES GRID ── */
+.ye-themes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.ye-theme-card {
+    background: #0d1020;
+    border: 1px solid #7a9ac922;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.ye-theme-card:hover {
+    border-color: #7a9ac966;
+    transform: translateY(-2px);
+}
+
+.ye-theme-top {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.ye-theme-body {
+    padding: 1.25rem;
+}
+
+.ye-theme-body h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    color: #7a9ac9;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.ye-theme-body p {
+    font-size: 0.9rem;
+    color: #6a8aaa;
+    line-height: 1.6;
+    margin-bottom: 0.85rem;
+}
+
+.ye-theme-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.ye-theme-tags span {
+    font-size: 0.72rem;
+    color: #7a9ac9;
+    border: 1px solid #7a9ac933;
+    padding: 0.2rem 0.6rem;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+}
+
+.ye-theme-custom {
+    border-style: dashed;
+    border-color: #7a9ac944;
+}
+
+/* ── DÉCO ELEMENTS ── */
+.ye-deco-elements {
+    background: #0d1020;
+    border: 1px solid #7a9ac922;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.ye-deco-elements h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: #7a9ac9;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.ye-deco-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.ye-deco-el {
+    text-align: center;
+}
+
+.ye-deco-el span {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.ye-deco-el p {
+    font-size: 0.78rem;
+    color: #6a8aaa;
+    line-height: 1.4;
+}
+
+/* ── SWEET TABLE ── */
+.ye-sweet-intro {
+    margin-bottom: 2rem;
+}
+
+.ye-sweet-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #a8bcd4;
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.ye-sweet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.ye-sweet-card {
+    background: #0d1020;
+    border: 1px solid #7a9ac922;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.ye-sweet-card:hover {
+    border-color: #7a9ac966;
+}
+
+.ye-sweet-featured {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-color: #7a9ac944;
+}
+
+.ye-sweet-img {
+    height: 130px;
+    background: #111825;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border-bottom: 1px solid #7a9ac922;
+    overflow: hidden;
+}
+
+.ye-sweet-featured .ye-sweet-img {
+    height: 100%;
+    border-bottom: none;
+    border-right: 1px solid #7a9ac922;
+}
+
+.ye-sweet-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ye-sweet-body {
+    padding: 1.25rem;
+}
+
+.ye-sweet-badge {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    color: #7a9ac9;
+    border: 1px solid #7a9ac944;
+    padding: 0.25rem 0.75rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.ye-sweet-body h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #eaf0f8;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+}
+
+.ye-sweet-body p {
+    font-size: 0.92rem;
+    color: #6a8aaa;
+    line-height: 1.7;
+}
+
+/* ── SWEET OPTIONS ── */
+.ye-sweet-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.ye-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #0d1020;
+    border: 1px solid #7a9ac91a;
+    border-left: 2px solid #7a9ac955;
+    padding: 1.25rem;
+}
+
+.ye-option-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.ye-option h6 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: #7a9ac9;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.ye-option p {
+    font-size: 0.9rem;
+    color: #6a8aaa;
+    line-height: 1.6;
+}
+
+/* ── ANIMATION GRID ── */
+.ye-anim-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.ye-anim-card {
+    background: #0d1020;
+    border: 1px solid #7a9ac922;
+    border-top: 2px solid #7a9ac955;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    transition: border-color 0.3s, background 0.3s;
+    position: relative;
+}
+
+.ye-anim-card:hover {
+    border-color: #7a9ac988;
+    background: #111825;
+}
+
+.ye-anim-icon-wrap {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.ye-anim-card h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #7a9ac9;
+    font-weight: 400;
+    margin-bottom: 0.65rem;
+    text-transform: uppercase;
+}
+
+.ye-anim-card p {
+    font-size: 0.9rem;
+    color: #6a8aaa;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.ye-anim-ages {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    color: #7a9ac9;
+    border: 1px solid #7a9ac933;
+    padding: 0.25rem 0.75rem;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* ── PACKAGES ── */
+.ye-anim-packages {
+    margin-bottom: 2rem;
+}
+
+.ye-anim-packages h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: #7a9ac9;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.ye-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.ye-package {
+    background: #0d1020;
+    border: 1px solid #7a9ac922;
+    padding: 1.75rem 1.5rem;
+    position: relative;
+}
+
+.ye-package-star {
+    border-color: #7a9ac966;
+    background: #0f1528;
+}
+
+.ye-package-badge {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #7a9ac9;
+    color: #06080e;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+}
+
+.ye-package-header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #7a9ac922;
+}
+
+.ye-package-header h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: #eaf0f8;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 0.35rem;
+}
+
+.ye-package-header p {
+    font-size: 0.85rem;
+    color: #7a9ac9;
+    font-style: italic;
+}
+
+.ye-package-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.ye-package-list li {
+    font-size: 0.9rem;
+    color: #6a8aaa;
+    line-height: 1.5;
+    padding-left: 1.1rem;
+    position: relative;
+}
+
+.ye-package-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    font-size: 0.55rem;
+    color: #7a9ac9;
+    top: 4px;
+}
+
+/* ── BANNER ── */
+.ye-banner {
+    background: #0d1020;
+    border: 1px solid #7a9ac944;
+    border-left: 3px solid #7a9ac9;
+    padding: 1.25rem 1.75rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.ye-banner-star {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.ye-banner p {
+    font-size: 1rem;
+    color: #a8bcd4;
+    line-height: 1.7;
+}
+
+.ye-banner strong {
+    color: #7a9ac9;
+    font-family: 'Cinzel', serif;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+}
+
+/* ── SEPARATOR ── */
+.ye-sep {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    color: #7a9ac955;
+}
+
+.ye-sep span {
+    font-size: 1.2rem;
+}
+
+.ye-sep::before,
+.ye-sep::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #7a9ac944, transparent);
+}
+
+/* ── CTA ── */
+.ye-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #0d1020 0%, #06080e 100%);
+    border: 1px solid #7a9ac922;
+    margin: 1rem 0 2rem;
+}
+
+.ye-cta-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: #eaf0f8;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.ye-btn-primary {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: #06080e;
+    background: #7a9ac9;
+    text-decoration: none;
+    border: 1px solid #7a9ac9;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
+}
+
+.ye-btn-primary:hover {
+    background: transparent;
+    color: #7a9ac9;
+}
+
+/* ── BACK BUTTON ── */
+.ye-actions {
+    text-align: center;
+    padding: 1rem 0 0;
+}
+
+.ye-btn-back {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 4px;
+    color: #7a9ac9;
+    text-decoration: none;
+    border: 1px solid #7a9ac944;
+    padding: 0.85rem 2.5rem;
+    text-transform: uppercase;
+    transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+
+.ye-btn-back:hover {
+    border-color: #7a9ac9;
+    background: #7a9ac915;
+    color: #eaf0f8;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .ye-tabs {
+        flex-direction: column;
+    }
+
+    .ye-tab {
+        border-right: none;
+        border-bottom: 1px solid #7a9ac933;
+        justify-content: flex-start;
+    }
+
+    .ye-tab:last-child {
+        border-bottom: none;
+    }
+
+    .ye-themes-grid,
+    .ye-anim-grid,
+    .ye-packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ye-sweet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ye-sweet-featured {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+    }
+
+    .ye-sweet-featured .ye-sweet-img {
+        height: 140px;
+        border-right: none;
+        border-bottom: 1px solid #7a9ac922;
+    }
+
+    .ye-sweet-options {
+        grid-template-columns: 1fr;
+    }
+
+    .ye-deco-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .ye-deco-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
