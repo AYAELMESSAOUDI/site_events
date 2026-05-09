@@ -1,13 +1,4 @@
 
-.container {
-    width: 800px;
-}
-@media (max-width: 600px) {
-    .container {
-        width: 100%; /* اجعل العرض كاملاً ليناسب الهاتف */
-        padding: 10px;
-    }
-}
 body {
     background-color: #FDFBF7; 
     font-family: 'Playfair Display', serif; 
@@ -73,8 +64,8 @@ header nav ul li a:hover {
     border : 2px solid transparent;
 }
 .btn-reserve:hover{
-    background-color: #2D5A4C;
-    color: #D4AF37;
+    background-color: #D4AF37;
+    color:  var(--brun-sombre);
     border: 2px solid var(--brun-maroc);
     transform: scale(1.05);
 }
@@ -109,13 +100,7 @@ header nav ul li a:hover {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-    gap: 25px; 
-    padding: 40px 10%;
-    background-color: #2D5A4C; 
-}
+
 
 .pic {
     background: #2D5A4C;
@@ -203,20 +188,7 @@ header nav ul li a:hover {
   border: 2px solid #D4AF37;
 }
 
-/* Séparateur avec étoile */
-.divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
-}
-.divider::before, .divider::after {
-  content: "";
-  height: 1px;
-  background: #D4AF37;
-  flex: 1;
-  margin: 0 15px;
-}
+
 footer {
     clear:both;
     background-color: #2D5A4C; /* Ton VERT COOL profond */
