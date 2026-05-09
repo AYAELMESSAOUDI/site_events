@@ -1,6 +1,6 @@
 body {
-    background-color: #2D5A4C; /*coleur du fond pour correspondre au thème de galerie*/ 
-    font-family: 'Segoe UI', sans-serif;/* police d'ecriture moderne et lisible*/
+    background-color: white; /*coleur du fond pour correspondre au thème de galerie*/ 
+    font-family: 'Poppins', sans-serif;/* police d'ecriture moderne et lisible*/
     margin: 0; /* Supprimer les marges par defaut du navigateur */
     display: flex;/*C'est POUR CENTRER le contenu*/
     justify-content: center;/*Centrage horozental*/
@@ -67,7 +67,6 @@ body {
     padding: 40px;
     border-left: 1px solid #ddd;
 }
-
 .summary-card {
     background:  #2D5A4C;
     color: white;

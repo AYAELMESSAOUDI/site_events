@@ -5,7 +5,7 @@ const bar = document.getElementById('success-bar');
 if(form){ 
 form.addEventListener('submit', (e) => {
     e.preventDefault(); 
-    console.log("Clic détecté !"); // Ceci s'affichera dans ta console (F12) pour tester
+    console.log("Clic détecté !"); 
     bar.classList.add('show');
     
     setTimeout(() => {

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
     <header>
         <div class="logo">
             <span class="logo-text">Your <br>&nbsp;&nbsp;&nbsp;&nbsp;Events</span>
@@ -26,70 +25,91 @@
         </nav>
     <a href="reserver.html" class="btn-reserve">Réserver</a>
     </header>
-    <main class="reservation-container">
-    <section class="reservation-card">
-        <h1>Réservez votre Événement</h1>
-        <p>Remplissez les détails ci-dessous pour bloquer votre date.</p>
-       <br>
-        <form id="payment-form">
-            <div class="form-section">
-                <h3>1. Détails de l'événement</h3>
-                <br>
+    <div class="booking-container">
+    <main class="booking-content">
+        <div class="form-section">
+            <h2><i class="fa-solid fa-calendar-check"></i> Détails de Réservation</h2>
+            <div class="reservation-header">
+    <p class="form-subtitle">Remplissez les détails ci-dessous pour bloquer votre date.</p>
+</div>
+            <form id="booking-form">
+                <div class="grid-inputs">
+                    <div class="input-group">
+                        <label>Nom Complet</label>
+                        <input type="text" placeholder="Non Prenon" required>
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="Client@gmail.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Téléphone</label>
+                        <input type="tel" placeholder="06XXXXXXXX" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Ville</label>
+                        <input type="text" placeholder="votre ville">
+                    </div>
+                </div>
+
                 <div class="input-group">
-                    <label>Type d'événement</label>
-                    <select required>
-                        <option value="">Sélectionnez...</option>
-                        <option value="mariage">Mariage (Pack Complet)</option>
-                        <option value="fiancailles">Fiançailles</option>
-                        <option value="anniversaire">Anniversaire</option>
+                    <label>Choisir l'Événement</label>
+                    <select id="event-select" onchange="updatePrice()" required>
+                        <option value="" data-price="0">Sélectionnez...</option>
+                        <option value="mariage" data-price="5000">Mariage (Pack Complet)</option>
+                        <option value="fiancailles" data-price="3000">Fiançailles</option>
+                        <option value="anniversaire" data-price="1500">Anniversaire</option>
                     </select>
                 </div>
+
                 <div class="input-group">
-                    <label>Date prévue</label>
+                    <label>Date de l'événement</label>
                     <input type="date" required>
                 </div>
+            </form>
+        </div>
+
+        <div class="payment-section">
+            <div class="summary-card">
+                <h3>Votre Panier</h3>
+                <div class="summary-line">
+                    <span>Prix Total :</span>
+                    <strong id="total-price">0 MAD</strong>
+                </div>
+                <div class="summary-line">
+                    <span>Acompte (30%) :</span>
+                    <strong id="deposit-price">0 MAD</strong>
+                </div>
+                <p class="small-text">* L'acompte est nécessaire pour confirmer la date.</p>
             </div>
 
             <div class="form-section">
-                <h3>2. Choisissez votre mode de paiement:</h3>
+                <h3>Choisissez votre mode de paiement:</h3>
                 <br>
                 <div class="card-option">
-                    
                     <input type="radio" name="payement-method" id="visa" value="visa" class="hidden-radio">
                     <label for="visa">
-                    <img src="330px-Visa_Inc._logo_(2021–present).svg.png" alt="Visa">
+                    <img src="/MERIEM/330px-Visa_Inc._logo_(2021–present).svg.png" alt="Visa">
                     </label>
-                    
                     <input type="radio" name="payement-method" id="mastercard" value="mastercard" class="hidden-radio" >
                     <label for="mastercard">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
                 </label>
                 </div>
-
-                <div class="input-group">
-                    <label>Nom sur la carte</label>
-                    <input type="text" placeholder="Entrer le nom" required>
+</div>
+            <div class="card-details">
+                <h4>Paiement par Carte</h4>
+                <input type="text" placeholder="Numéro de carte" class="full-width">
+                <div class="row">
+                    <input type="text" placeholder="MM/YY">
+                    <input type="text" placeholder="CVC">
                 </div>
-
-                <div class="input-group">
-                    <label>Numéro de carte</label>
-                    <input type="text" id="card-number" placeholder="Entrer numero de carte" maxlength="19" required>
-                </div>
-                <div class="form-row">
-                    <div class="input-group">
-                        <label>Expiration</label>
-                        <input type="text" placeholder="MM/YY" maxlength="5" required>
-                    </div>
-                    <div class="input-group">
-                        <label>CVC </label>
-                        <input type="password" placeholder="CVC" maxlength="3" required>
-                    </div>
-                </div>
+                <button type="button" class="btn-pay">Confirmer et Payer</button>
             </div>
-            <button type="submit" class="btn-pay">Confirmer la Réservation</button>
-        </form>
-    </section>
-</main>
+        </div>
+
+    </div>
+</div>
 <footer>
     <div class="footer-container">
         <div class="footer-column brand">
