@@ -71,7 +71,6 @@ nav ul li a {
 nav a.active {
   color: var(--brun-sombre);
   font-weight: bold;
-  border-bottom: 2px solid var(--brun-sombre);
 }
 header nav ul li a:hover {
     color: var(--brun-sombre) !important;

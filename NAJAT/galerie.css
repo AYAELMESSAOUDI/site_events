@@ -1,7 +1,7 @@
 
 body {
-    background-color: #FDFBF7; 
-    font-family: 'Playfair Display', serif; 
+    background-color: white; 
+    font-family:'Cinzel', serif; 
     color: #f4ede4; 
 }
 header {
@@ -18,6 +18,13 @@ header {
     border-bottom: 2px solid var(--brun-sombre);
     top: 0;
     z-index: 1000;
+}
+nav a.active{
+    color :var(--brun-sombre);
+    font-weight: bold;
+    border-bottom: 2px solid var(--brun-sombre) !important;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 .logo {
     display: flex;
@@ -73,6 +80,11 @@ header nav ul li a:hover {
 .active { color: #D4AF37 !important; border-bottom: 2px solid var(--primary-color); }
 
 .button-group{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    flex-wrap: nowrap;
+
   padding: 10px 25px;
     margin: 5px;
     border: 2px solid var(--brun-maroc);
@@ -93,7 +105,7 @@ header nav ul li a:hover {
     border: none;
     margin-left: 100px;
     margin-right: 25px;
-    padding: 10px 80px;
+    padding: 10px 60px;
     border-radius: 5px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -286,4 +298,86 @@ footer {
 }
 .year{
     color:#D4AF37;
+}
+/* --- RESPONSIVITÉ GLOBALE --- */
+
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Menu Navigation */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    /* Groupe de boutons Filtres */
+    .button-group {
+        flex-direction: column; /* Aligne les boutons verticalement sur mobile */
+        align-items: center;
+        gap: 10px;
+        border: none; /* Optionnel : enlève la bordure du groupe sur mobile */
+    }
+
+    .my-button {
+        width: 80%; /* Les boutons prennent plus de place */
+        margin: 0;  /* Annule les marges fixes qui décalent tes boutons */
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    /* Conteneur de la Galerie */
+    .gallery-container {
+        width: 95%;
+        max-width: none;
+        height: auto; /* Laisse la hauteur s'adapter au contenu */
+        padding: 10px;
+    }
+
+    .main-display img {
+        height: 350px; /* Réduit la hauteur de l'image principale sur mobile */
+    }
+
+    /* Miniatures */
+    .thumbnails {
+        flex-wrap: wrap; /* Les miniatures passent à la ligne si besoin */
+        gap: 5px;
+    }
+
+    .thumb {
+        width: 60px;
+        height: 45px;
+    }
+
+    /* Footer Ajustement */
+    footer {
+        margin-top: 100px; /* Réduit l'espace énorme sur mobile */
+        padding: 40px 5% 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .main-display img {
+        height: 250px;
+    }
+
+    .btn-reserve {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
 }
