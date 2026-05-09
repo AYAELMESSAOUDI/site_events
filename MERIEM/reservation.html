@@ -116,9 +116,9 @@
             <h4>Navigation</h4>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="services.html">Nos Services</a></li>
+                <li><a href="/AYA/Aya.html">Nos Services</a></li>
                 <li><a href="/NAJAT/galerie.html">Galerie</a></li>
-                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="/AYA/apropos.html">À propos</a></li>
             </ul>
         </div>
 
@@ -152,6 +152,26 @@
         depositDisplay.innerText = deposit.toFixed(0) + " MAD";
     }
 </script>
+<script>
+const scrollBtn = document.createElement('button');
+scrollBtn.innerHTML = '↑';
+scrollBtn.style.cssText = `
+  position: fixed; bottom: 30px; right: 30px;
+  width: 50px; height: 50px; border-radius: 50%;
+  background: #2D5A4C; color: #D4AF37;
+  border: 2px solid #D4AF37; font-size: 1.3rem;
+  cursor: pointer; opacity: 0;
+  transition: opacity 0.3s; z-index: 9999;
+`;
+document.body.appendChild(scrollBtn);
 
+window.addEventListener('scroll', () => {
+  scrollBtn.style.opacity = window.scrollY > 400 ? '1' : '0';
+});
+
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 </body>
 </html>
