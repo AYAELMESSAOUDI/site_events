@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Nos Services Aya</title>
     <link rel="stylesheet" href="/AYA/Aya.css">
     
 </head>
 
-<script src="/AYA/Aya.js"></script>
+
 <body>
+
+    <script src="Aya.js"></script>
 
    <header>
         <div class="logo">
@@ -29,7 +32,7 @@
     </header>
 
 
-<!-- Le titre va ICI, en dehors du header -->
+
 <section class="page-hero">
     
 </section>
@@ -47,7 +50,7 @@
                 <img src="/AYA/Hammam.jpg" alt="Rituel Hammam Laaroussa">
                 <blockquote>Le Rituel de Pureté</blockquote>
                 <p>Évadez-vous dans la douceur de notre hammam traditionnel. Entre soins ancestraux et rituels relaxants.</p>
-                <a href="/AYA/Wedding.html">Découvrir le Rituel</a>
+                <a href="/AYA/Wedding.html#Hammam">Découvrir le Rituel</a>
             </div>
 
             <div class="card">
@@ -55,7 +58,7 @@
                 <img src="/AYA/henne.jpg" alt="Cérémonie du Henné">
                 <blockquote>L'Empreinte de la Tradition</blockquote>
                 <p>Une soirée intime placée sous le signe de la convivialité. Nos artistes subliment vos mains de motifs délicats.</p>
-                <a href="/AYA/Wedding.html">Découvrir la Soirée</a>
+                <a href="/AYA/Wedding.html#henne">Découvrir la Soirée</a>
             </div>
 
             <div class="card">
@@ -63,7 +66,7 @@
                 <img src="/AYA/Moroccan wedding.jpg" alt="Mariage Marocain Grand Jour">
                 <blockquote>L'Éclat de la Cérémonie</blockquote>
                 <p>De la mise en beauté royale à l'accompagnement personnalisé, nous veillons à ce que chaque détail soit parfait.</p>
-                <a href="/AYA/Wedding.html">L'Offre Grand Jour</a>
+                <a href="/AYA/Wedding.html#wed">L'Offre Grand Jour</a>
             </div>
         </div>
     </section>
@@ -81,7 +84,7 @@
                 <img src="/AYA/makeup.jpg" alt="Maquillage Fiançailles">
                 <blockquote>Rayonnez de Naturel</blockquote>
                 <p>Un maquillage frais et lumineux ainsi qu'une coiffure élégante qui sublime vos traits sans vous transformer.</p>
-                <a href="/AYA/fiançailles.html">Nos Forfaits Beauté</a>
+                <a href="/AYA/fiançailles.html#beaute">Nos Forfaits Beauté</a>
             </div>
 
             <div class="card">
@@ -89,7 +92,7 @@
                 <img src="/AYA/Deco.jpg" alt="Décoration Fiançailles">
                 <blockquote>Votre rêve, notre réalité</blockquote>
                 <p>Création d'une ambiance sur mesure pour votre réception. Nous donnons vie à vos envies de décoration.</p>
-                <a href="/AYA/fiançailles.html">Découvrir nos Styles</a>
+                <a href="/AYA/fiançailles.html#styles">Découvrir nos Styles</a>
             </div>
 
             <div class="card">
@@ -97,7 +100,7 @@
                 <img src="/AYA/Dress.jpg" alt="Habillage Mariée">
                 <blockquote>L'Élégance de la Future Mariée</blockquote>
                 <p>Aide au choix de la tenue et mise en place des accessoires pour que votre silhouette soit impeccable.</p>
-                <a href="/AYA/fiançailles.html">En savoir plus</a>
+                <a href="/AYA/fiançailles.html#accompa">En savoir plus</a>
             </div>
         </div>
     </section>
@@ -115,7 +118,7 @@
                 <img src="/AYA/Anniv.jpg" alt="Décoration Anniversaire">
                 <blockquote>Un décor à votre image</blockquote>
                 <p>Du thème "Chic & Gold" aux ambiances tropicales, nous créons une décoration immersive et personnalisée.</p>
-                <a href="/AYA/anniv.html">Découvrir les thèmes</a>
+                <a href="/AYA/anniv.html#theme">Découvrir les thèmes</a>
             </div>
 
             <div class="card">
@@ -123,7 +126,7 @@
                 <img src="/AYA/birth.jpg" alt="Cake Design Anniversaire">
                 <blockquote>Plaisir des yeux et des papilles</blockquote>
                 <p>Un gâteau spectaculaire entouré d'une table gourmande : cupcakes, sablés et bonbonnières assorties.</p>
-                <a href="/AYA/anniv.html">Nos créations</a>
+                <a href="/AYA/anniv.html#creation">Nos créations</a>
             </div>
 
             <div class="card">
@@ -131,7 +134,7 @@
                 <img src="/AYA/animation.jpg" alt="Animation fête">
                 <blockquote>Le plein d'émotions</blockquote>
                 <p>Spectacles, ateliers créatifs ou DJ... Nous gérons toute l'animation pour des souvenirs mémorables.</p>
-                <a href="/AYA/anniv.html">Réserver</a>
+                <a href="/AYA/anniv.html#animation">Animation</a>
             </div>
         </div>
     </section>
@@ -166,8 +169,29 @@
         <p>&copy; 2026 Your Events — Passion & Excellence. Tous droits réservés.</p>
     </div>
 </footer>
-<script src="/AYA/Aya.js"></script>
-    </body>  
+
+<script>
+const scrollBtn = document.createElement('button');
+scrollBtn.innerHTML = '↑';
+scrollBtn.style.cssText = `
+  position: fixed; bottom: 30px; right: 30px;
+  width: 50px; height: 50px; border-radius: 50%;
+  background: #2D5A4C; color: #D4AF37;
+  border: 2px solid #D4AF37; font-size: 1.3rem;
+  cursor: pointer; opacity: 0;
+  transition: opacity 0.3s; z-index: 9999;
+`;
+document.body.appendChild(scrollBtn);
+
+window.addEventListener('scroll', () => {
+  scrollBtn.style.opacity = window.scrollY > 400 ? '1' : '0';
+});
+
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>  
 </html>
 
 

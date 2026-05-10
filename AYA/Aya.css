@@ -887,7 +887,8 @@ body {
 
 .ye-card-img {
     width: 100%;
-    height: 140px;
+    height: 350px;
+    object-fit: contain;
     background: #1e1018;
     display: flex;
     align-items: center;
@@ -2212,5 +2213,119 @@ footer {
     font-size: 0.8rem;
     opacity: 0.6;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 15px; /* Réduit l'espace entre Accueil, Galerie, etc. */
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .btn-reserve {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 850px) {
+    /* Grille principale (Aya, Najat, Meriem et Services) */
+    .services-grid, 
+    .ye-hammam-grid, 
+    .ye-rituel-grid, 
+    .ye-cards-grid, 
+    .ye-features, 
+    .ye-accomp-extras {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 10px !important;
+    }
+
+    .card, .ye-card, .ye-hammam-card, .ye-rituel-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Pour éviter que les images soient trop géantes sur mobile */
+    .card img, .ye-card-img, .ye-rituel-img {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 850px) {
+    /* Grille principale (Aya, Najat, Meriem et Services) */
+    .services-grid, 
+    .ye-hammam-grid, 
+    .ye-rituel-grid, 
+    .ye-cards-grid, 
+    .ye-features, 
+    .ye-accomp-extras {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 10px !important;
+    }
+
+    .card, .ye-card, .ye-hammam-card, .ye-rituel-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Pour éviter que les images soient trop géantes sur mobile */
+    .card img, .ye-card-img, .ye-rituel-img {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .ye-beaute-intro, .ye-hammam-intro, .ye-deco-showcase {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .ye-beaute-badge, .ye-hammam-visual, .ye-deco-visual {
+        width: 100% !important;
+        margin-top: 20px;
+    }
+    
+    /* Correction des thèmes d'anniversaire (2 colonnes au lieu de 4) */
+    .ye-themes-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .ye-sweet-grid {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .ye-sweet-featured {
+        display: block !important; /* Annule le 1fr 2fr */
+    }
+
+    .ye-sweet-img {
+        height: 200px !important;
+        border-right: none !important;
+        border-bottom: 1px solid #7a9ac922 !important;
+    }
+}
+
+
+
+
 
 
