@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Events | Excellence Événementielle</title>
+    <link rel="stylesheet" href="/MERIEM/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-text">Your <br>&nbsp;&nbsp;&nbsp;&nbsp;Events</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/MERIEM/index.html" class="active"><b>Accueil</b></a></li>
+                <li><a href="/AYA/Aya.html"><b>Services</b></a></li>
+                <li><a href="/NAJAT/galerie.html"><b>Galerie</b></a></li>
+                <li><a href="/AYA/apropos.html" ><b>A propos</b></a></li>
+                <li><a href="/MERIEM/contact.html"><b>Contact</b></a></li>
+
+            </ul>
+        </nav>
+    <a href="/NAJAT/reservation.html" class="btn-reserve">Réserver</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Créez des moments <br><span>Inoubliables</span></h1>
+            <p>L'art de l'événementiel au cœur du Maroc. Nous transformons vos rêves en expériences magiques avec une élégance intemporelle.</p>
+            <div class="hero-btns">
+                <a href="/AYA/Aya.html" class="btn-primary">Nos Services</a>
+                <a href="/NAJAT/galerie.html" class="btn-secondary">Voir nos réalisations</a>
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="footer-container">
+        <div class="footer-column brand">
+            <h3 class="footer-logo">Your <span>Events</span></h3>
+            <p>L'art de l'événementiel au cœur du Maroc. Nous créons des souvenirs qui durent toute une vie.</p>
+        </div>
+
+        <div class="footer-column links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="/MERIEM/index.html">Accueil</a></li>
+                <li><a href="/AYA/Aya.html">Nos Services</a></li>
+                <li><a href="/NAJAT/galerie.html">Galerie</a></li>
+                <li><a href="/AYA/apropos.html">À propos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column social">
+            <h4>Suivez-nous</h4>
+            <div class="social-icons">
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Your Events — Passion & Excellence. Tous droits réservés.</p>
+    </div>
+</footer>
+<script>
+const scrollBtn = document.createElement('button');
+scrollBtn.innerHTML = '↑';
+scrollBtn.style.cssText = `
+  position: fixed; bottom: 30px; right: 30px;
+  width: 50px; height: 50px; border-radius: 50%;
+  background: #2D5A4C; color: #D4AF37;
+  border: 2px solid #D4AF37; font-size: 1.3rem;
+  cursor: pointer; opacity: 0;
+  transition: opacity 0.3s; z-index: 9999;
+`;
+document.body.appendChild(scrollBtn);
+
+window.addEventListener('scroll', () => {
+  scrollBtn.style.opacity = window.scrollY > 400 ? '1' : '0';
+});
+
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
